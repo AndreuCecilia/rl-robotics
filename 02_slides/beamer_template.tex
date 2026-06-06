@@ -1,0 +1,258 @@
+\documentclass[c,8pt]{beamer}
+
+\setbeamercovered{dynamic}
+
+% --- Colors ---
+\definecolor{MyYellow}{RGB}{220,180,0}
+\definecolor{MyAmber}{RGB}{250,229,33}
+\definecolor{MyLightYellow}{RGB}{255,255,130}
+\definecolor{MyBlue}{RGB}{0,102,204}
+\definecolor{MyRed}{RGB}{204,0,0}
+\definecolor{MyLightBlue}{RGB}{50,100,255}
+\definecolor{MyRefBlue1}{RGB}{73,157,220}
+\definecolor{MyRefBlue2}{RGB}{135,179,229}
+\definecolor{MyGreen}{RGB}{0,153,76}
+\definecolor{MyPurple}{RGB}{112,10,214}
+\definecolor{MyOrange}{RGB}{255,111,31}
+\definecolor{themeBlue}{rgb}{0.29,0.58,0.87}
+\definecolor{amber}{rgb}{1.0,0.75,0.0}
+\definecolor{greenrow}{RGB}{220,245,220}
+\definecolor{yellowrow}{RGB}{255,245,200}
+\definecolor{redrow}{RGB}{255,230,230}
+\definecolor{bluerow}{RGB}{220,230,255}
+\definecolor{bleucit}{rgb}{0.2,0.4,0.6}
+
+\setbeamercolor{structure}{fg=themeBlue}
+
+% --- Packages ---
+\usepackage[english]{babel}
+\usepackage{amsmath,mathrsfs,amsfonts,amssymb,bm}
+\usepackage{graphicx,caption,subcaption}
+\usepackage{soul,cancel}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{ifthen}
+\usepackage{ragged2e}
+\usepackage{booktabs,colortbl,array}
+\usepackage{algorithm,algpseudocode}
+\usepackage{epstopdf,pifont}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,calc,positioning,arrows.meta,
+                decorations.pathmorphing,decorations.markings,
+                matrix,mindmap,trees,automata}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+\usepackage[skins,theorems]{tcolorbox}
+\usepackage{varwidth}
+
+% --- Theme ---
+\usetheme{Madrid}
+\useinnertheme{default}
+\usecolortheme{default}
+\usefonttheme{default}
+\useoutertheme[subsection=false]{smoothbars}
+
+% --- Navigation ---
+\beamertemplatenavigationsymbolsempty
+\expandafter\def\expandafter\insertshorttitle\expandafter{RL Robotics 2026}
+\setbeamercovered{transparent}
+\setbeamercolor{footline}{fg=black}
+\setbeamerfont{footline}{series=\bfseries}
+\AtBeginSection[]{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% --- Block color overrides ---
+\newcommand\blueblock[2]{{\setbeamercolor{block title}{fg=white,bg=themeBlue}\begin{block}{#1}#2\end{block}}}
+\newcommand\yellowblock[2]{{\setbeamercolor{block title}{fg=black,bg=MyAmber}\begin{block}{#1}#2\end{block}}}
+\newcommand\redblock[2]{{\setbeamercolor{block title}{fg=white,bg=MyRed}\begin{block}{#1}#2\end{block}}}
+\newcommand\greenblock[2]{{\setbeamercolor{block title}{fg=white,bg=MyGreen}\begin{block}{#1}#2\end{block}}}
+\newcommand\purpleblock[2]{{\setbeamercolor{block title}{fg=white,bg=MyPurple}\begin{block}{#1}#2\end{block}}}
+
+\AtBeginEnvironment{theorem}{\setbeamercolor{block title}{fg=white,bg=themeBlue}}
+\AtBeginEnvironment{assumption}{\setbeamercolor{block title}{fg=white,bg=themeBlue}}
+\AtBeginEnvironment{proposition}{\setbeamercolor{block title}{fg=white,bg=themeBlue}}
+\AtBeginEnvironment{definition}{\setbeamercolor{block title}{fg=white,bg=MyGreen}}
+
+% --- Theorem environments ---
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+
+% --- Math operators ---
+\newcommand{\pderiv}[2]{\dfrac{\partial #1}{\partial #2}}
+\def\RR{\mathbb{R}}
+\def\EE{\mathbb{E}}
+\def\PP{\mathbb{P}}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\trace}{tr}
+\newcommand{\dddt}{{\dfrac{{\rm d}}{{\rm d}t}}}
+\newcommand{\ddt}{{\tfrac{{\rm d}}{{\rm d}t}}}
+\renewcommand{\Re}{\mathfrak{Re}}
+\renewcommand{\Im}{\mathfrak{Im}}
+\newcommand{\btVFill}{\vskip0pt plus 1filll}
+\def\beeq#1{\begin{equation}{#1}\end{equation}}
+\newcommand\qmx[1]{\left(\begin{matrix}#1\end{matrix}\right)}
+\newcommand\pmx[1]{\left(\begin{matrix}#1\end{matrix}\right)}
+\newcommand\smallmat[1]{\left[\begin{smallmatrix}#1\end{smallmatrix}\right]}
+\newcommand\pdef[1]{\mathbb{S}_{\succ0}^{#1}}
+\newcommand\psemidef[1]{\mathbb{S}_{\succeq0}^{#1}}
+\newcommand\wnorm[2]{\lvert #1\rvert^2_{#2}}
+\newcommand\spec[1]{\text{spec}(#1)}
+
+% --- Calligraphic shortcuts ---
+\newcommand{\cA}{\mathcal{A}}  \newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}  \newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}  \newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}  \newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}  \newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}  \newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}  \newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}  \newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}  \newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}  \newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}  \newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}  \newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+% --- RL-specific notation ---
+\newcommand{\states}{\mathcal{S}}
+\newcommand{\actions}{\mathcal{A}}
+\newcommand{\policy}{\pi}
+\newcommand{\Vpi}{V^{\pi}}
+\newcommand{\Qpi}{Q^{\pi}}
+\newcommand{\Vstar}{V^{*}}
+\newcommand{\Qstar}{Q^{*}}
+\newcommand{\Bell}{\mathcal{T}}
+\newcommand{\Bellpi}{\mathcal{T}^{\pi}}
+\newcommand{\disc}{\gamma}
+
+% --- Citation helpers ---
+\newcommand\citb[1]{{\texttt{\textcolor{bleucit}{[#1]}}}}
+\newcommand\citbs[1]{{\small\texttt{\textcolor{bleucit}{[#1]}}}}
+\newcommand\citw[1]{{\texttt{\textcolor{white}{[#1]}}}}
+
+% --- Marks ---
+\newcommand{\cmark}{{\color{MyGreen}\ding{51}}}
+\newcommand{\xmark}{{\color{MyRed}\ding{55}}}
+\newcommand{\mybullet}{{\color{MyGreen}\bullet}}
+
+% --- Figure path ---
+\graphicspath{{Fig/}}
+
+% ============================================================
+% TITLE — update for each week
+% ============================================================
+\title{Week XX — Topic Title}
+\author[Andreu Cecilia]{\large \textbf{Andreu Cecilia}}
+\date{240MAR45 — Reinforcement Learning in Robotics \\ 2026}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+\begin{frame}
+  \titlepage
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Fig/cropped-logo-ETSEIB-UPC}
+  \end{figure}
+\end{frame}
+
+% ============================================================
+\section{Section Title}
+% ============================================================
+
+\begin{frame}{Frame Title}
+
+  \blueblock{Key idea}{
+    Main conceptual point goes here.
+  }
+
+  \vspace{3mm}
+
+  Supporting content, equation, or figure.
+
+\end{frame}
+
+% ============================================================
+% RECURRING ARTIFACTS — copy-paste as needed
+% ============================================================
+
+% --- Unifying diagram frame ---
+\begin{comment}
+\begin{frame}{The Unifying Diagram}
+  \begin{center}
+  \begin{tabular}{l|cc}
+    \toprule
+                      & \textbf{Model known} & \textbf{Model unknown} \\
+    \midrule
+    \textbf{Value-based}  & DP / LQR             & Q-learning, DQN        \\
+    \textbf{Policy-based} & iLQR                 & REINFORCE              \\
+    \textbf{Hybrid}       & MPC                  & Actor-critic, Dyna     \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  \blueblock{Today}{Highlight the cell of the method introduced this week.}
+\end{frame}
+\end{comment}
+
+% --- Failure-modes frame (Week 7+, open every theory session) ---
+\begin{comment}
+\begin{frame}{Failure Modes of Approximate RL}
+  \redblock{Not a complete taxonomy}{
+    These are the three failure modes that drive the course narrative.
+    Other failure modes exist (non-stationarity, multi-agent, deployment failures).
+  }
+  \begin{enumerate}
+    \item \textbf{Instability} under function approximation \hfill \citbs{Week 7: DQN}
+    \item \textbf{High variance} in policy optimization \hfill \citbs{Week 9: baselines, GAE}
+    \item \textbf{Distribution shift} in data \hfill \citbs{Week 12: offline RL}
+  \end{enumerate}
+  \vspace{2mm}
+  \textit{Other failure modes (touched, not centered):}
+  \begin{enumerate}\setcounter{enumi}{3}
+    \item Insufficient exploration \hfill \citbs{Week 4+}
+    \item Model bias \hfill \citbs{Week 11}
+    \item Reward misspecification \hfill \citbs{Week 13}
+  \end{enumerate}
+  \blueblock{Today}{\color{MyRed}\textbf{Failure mode X} — [name] — is the focus of today's session.}
+\end{frame}
+\end{comment}
+
+% --- Actor-critic arc frames (Weeks 7 / 9 / 10) ---
+\begin{comment}
+% End of Week 7:
+\blueblock{Coming up after the exam}{
+  Today we covered \textbf{failure mode 1} (instability under FA). \\
+  After the exam: \textbf{failure mode 2} (high variance in policy optimization). \\
+  Week 10: one construction addresses both. Actor-critic is not a topic --- it is a conclusion.
+}
+
+% Start of Week 9:
+\blueblock{Recap: where we are}{
+  Two weeks ago: value-based methods break under approximation (failure mode 1). \\
+  Today: direct policy optimization --- failure mode 2. \\
+  Next week: why neither branch alone is sufficient.
+}
+
+% End of Week 9:
+\blueblock{Hold this thought}{
+  Two methods. Two dominant failure modes. Two weaknesses. \\
+  Next week: one construction fixes both.
+}
+
+% Start of Week 10:
+\blueblock{Actor-critic is not a topic --- it is a conclusion}{
+  Failure mode 1 makes value-based methods unstable. \\
+  Failure mode 2 makes policy-based methods high-variance. \\
+  Today: one construction addresses both.
+}
+\end{comment}
+
+\end{document}
