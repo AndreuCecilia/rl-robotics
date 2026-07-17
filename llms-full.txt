@@ -194,14 +194,15 @@ Distribution shift: Levine et al. (2020) offline RL tutorial
 
 ---
 
-# Weekly study packs
+# Weekly study guides
 URL: https://AndreuCecilia.github.io/rl-robotics/course/index
 
-Weekly study packs
-Each week’s materials — slides, lecture notes, and exercises — are released
-here before the session, so you can pre-read. The interlinked
-concept knowledge base complements these with self-contained,
-cross-referenced explanations.
+Weekly study guides
+Slides, lecture notes, and exercises are distributed on the official
+university course page, released before each session so you can pre-read.
+The pages here are per-week study guides: what the week is about, which
+concepts it introduces (linked into the concept knowledge base), how
+to prepare, and any errata for the released materials.
 
 
                   
@@ -210,7 +211,7 @@ cross-referenced explanations.
                 
 
 Published weeks appear under Course in the left explorer (and below). Each
-week page links its three PDFs and the concepts introduced that week.
+week page links the concepts introduced that week.
 
 
 
@@ -435,7 +436,9 @@ Sutton &amp; Barto, Reinforcement Learning: An Introduction (2nd ed.) — used s
 Tedrake, Underactuated Robotics (free online) — pendulum and MPC material
 Original papers per method (DQN, PPO, SAC, CQL, CPO, DAgger) — read the originals for methods you use in the project
 
-Weekly reading assignments appear on each week’s study pack page.
+Weekly reading assignments appear with the materials on the official university
+course page; each week’s study guide here covers what to read
+first and how to prepare.
 
 ---
 
@@ -490,8 +493,10 @@ about the dynamics, and what are we trying to learn?
 Model knownModel unknownValue-basedDP / LQRQ-learning, DQNPolicy-basediLQRPolicy gradient (REINFORCE)HybridMPCActor-critic, Dyna
 Method names become links as their concept notes are published over the semester.
 Weekly materials
-Weekly study packs — slides, lecture notes, and exercises for
-each week, released before the session.
+Slides, lecture notes, exercises, and code are distributed on the official
+university course page, released before each session.
+Weekly study guides here tell you what each week is about,
+which concepts it introduces, and how to prepare.
 Course information
 Syllabus and course guide — schedule, assessment, the
 cumulative project, software stack, and reading list.
@@ -509,7 +514,7 @@ This site is built to be AI-readable. To give your assistant (Claude Code,
 Codex, ChatGPT, …) the full course context:
 
 Best: clone the published site and run your assistant inside it —
-everything works offline, weekly PDFs included:
+the whole concept knowledge base works offline:
 git clone github.com/AndreuCecilia/rl-robotics
 Or point it at a single URL containing the full text of every published page:
 andreucecilia.github.io/rl-robotics/llms-full.txt
