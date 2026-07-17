@@ -1,0 +1,544 @@
+# RL in Robotics - 240MAR45 - full published content
+
+Source: https://AndreuCecilia.github.io/rl-robotics (auto-generated from the published site; regenerated on every deploy)
+
+---
+
+# Bellman equation
+URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/bellman-equation
+
+Bellman equation
+The principle of optimality expressed as a fixed-point equation: the value of a state equals the immediate reward plus the discounted value of the next state under optimal behavior.
+Where it sits
+
+Unifying diagram: foundational — underlies all cells
+Failure mode addressed: none (this is the problem statement, not a solution method)
+Course first appearance: Week 1
+
+Core idea
+The Bellman equation decomposes the infinite-horizon optimization problem into a one-step recursion. Instead of optimizing over all future trajectories, you need only find a function V^* that is consistent with its own one-step lookahead. This is the control-theoretic principle of optimality expressed as an operator fixed point.
+Formal definition
+Bellman optimality equation (discrete-time stochastic):
+V^*(s) = \max_{a \in \mathcal{A}} \sum_{s&#039;} P(s&#039; \mid s, a) \left[ r(s, a, s&#039;) + \gamma V^*(s&#039;) \right]
+Equivalently, in operator form: V^* = \mathcal{T} V^*, where \mathcal{T} is the Bellman optimality operator.
+Bellman evaluation equation (for a fixed policy \pi):
+V^\pi(s) = \sum_{a} \pi(a \mid s) \sum_{s&#039;} P(s&#039; \mid s, a) \left[ r(s, a, s&#039;) + \gamma V^\pi(s&#039;) \right]
+Connection to classical control
+LQR solves the Bellman equation analytically for linear-quadratic problems: the value function is quadratic (V^*(x) = x^\top P x) and the Riccati equation is the Bellman equation in closed form. The HJB equation is the continuous-time analogue.
+The Bellman operator \mathcal{T} is a \gamma-contraction in the sup-norm (Banach fixed-point theorem), guaranteeing that value iteration V_{k+1} = \mathcal{T} V_k converges geometrically to V^*.
+Key limitation
+Exact solution requires knowing the transition model P(s&#039; \mid s, a) and reward r. When the model is unknown, we need sample-based approximations (TD learning, Q-learning). When the state space is large or continuous, we need function approximation in RL.
+Related concepts
+Dynamic programming | Value iteration | Policy iteration | TD learning | Q-learning | LQR | Curse of dimensionality
+References
+
+Primary: Bertsekas (2019), Ch. 1; Meyn (2022), Ch. 1
+Classical control analogue: Anderson &amp; Moore, Optimal Control, Ch. 2
+
+
+---
+
+# Deadly triad
+URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/deadly-triad
+
+Deadly triad
+The combination of bootstrapping + off-policy learning + function approximation that provably causes divergence in value-based RL. No two of the three cause divergence; all three together do.
+Where it sits
+
+Unifying diagram: value-based × model-unknown (with function approximation)
+Failure mode addressed: this is failure mode 1 (instability under function approximation)
+Course first appearance: Week 7
+
+Core idea
+Each ingredient alone is benign:
+
+Bootstrapping (using value estimates in the target) speeds up learning
+Off-policy data (learning from a different behavior policy) enables data reuse
+Function approximation generalizes across states
+
+But together, they interact to create positive feedback loops: the approximation error in the value estimate propagates through bootstrapped targets, and off-policy data means the training distribution doesn’t correct toward the true distribution. The result is divergence — value estimates blow up even on simple problems.
+Formal statement
+Baird’s counterexample (1995) provides a concrete 7-state MDP where semi-gradient TD(0) with linear function approximation diverges when all three ingredients are present. The key: the Bellman operator is no longer a contraction in the norm induced by the function approximation.
+DQN as engineering response
+DQN doesn’t eliminate the deadly triad — it engineers around it:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DQN trickWhich part of triad it addressesExperience replay bufferDecorrelates consecutive samples; partially mitigates off-policy issuesTarget networkStabilizes the bootstrapped target by holding it fixed for N stepsDouble DQNReduces overestimation bias from bootstrapping + max operator
+Key insight: these are stability tricks, not theoretical fixes. The deadly triad is still present. This is why deep RL training remains fragile.
+Connection to classical control
+The convergence of Value iteration rests on the Bellman operator being a contraction in \ell_\infty. Function approximation breaks this — the projected Bellman operator is no longer a contraction in general. This is a stability problem in the control-theoretic sense: a fixed-point iteration that diverges rather than converges.
+Key limitation
+No general solution exists. Current best practice combines the DQN stability tricks with careful hyperparameter tuning and monitoring for divergence.
+Related concepts
+Function approximation in RL | DQN | Failure modes of approximate RL | Q-learning | Bellman equation
+References
+
+Sutton &amp; Barto (2018), Ch. 11 (“The deadly triad”)
+Tsitsiklis &amp; Van Roy (1997) — convergence conditions for TD with FA
+Baird (1995) — counterexample
+Mnih et al. (2015) — DQN engineering response
+
+
+---
+
+# Failure modes of approximate RL
+URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/failure-modes-of-approximate-rl
+
+Failure modes of approximate RL
+A teaching framework (not a complete taxonomy) organizing the dominant ways approximate RL breaks down. Introduced Week 7 as the central organizing artifact for the second half of the course.
+Where it sits
+
+Unifying diagram: cross-cutting — affects all cells with function approximation
+Course first appearance: Week 7 (end of session)
+Recurs: every theory session Weeks 8–15 opens with “which failure mode does today’s method address?”
+
+The six failure modes
+Three dominant (drive the value → policy → actor-critic narrative arc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Failure modeAddressed byWeek formalized1Instability under function approximationDQN (replay, target network, double DQN)72High variance in policy optimizationBaselines, GAE, Actor-critic93Distribution shift in dataOffline RL, Residual RL12
+Three secondary (real but not part of the main narrative arc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Failure modeAddressed byWeek introduced4Insufficient explorationUCB, Thompson, curiosity4 (bandits)5Model bias in model-based methodsEnsemble models, MBPO116Reward misspecificationCBFs, CMDPs, reward shaping13
+IMPORTANT: this is a teaching device, not ground truth
+This framework privileges the three failure modes that drive the course narrative (value-based → policy-based → actor-critic). Other important failure modes exist that the course does not center:
+
+Non-stationarity in deployment
+Partial observability (touched in POMDP, not centered)
+Multi-agent dynamics (out of scope)
+Reproducibility and hyperparameter sensitivity (Week 15)
+
+Related concepts
+Deadly triad | DQN | Policy gradient theorem | Actor-critic | Offline RL | Safe RL | Model-based RL
+References
+
+No single reference: this framework is a course-specific synthesis
+Instability: Tsitsiklis &amp; Van Roy (1997); Baird (1995)
+Variance: Williams (1992); Schulman et al. (2016) GAE
+Distribution shift: Levine et al. (2020) offline RL tutorial
+
+
+---
+
+# Weekly study packs
+URL: https://AndreuCecilia.github.io/rl-robotics/course/index
+
+Weekly study packs
+Each week’s materials — slides, lecture notes, and exercises — are released
+here before the session, so you can pre-read. The interlinked
+concept knowledge base complements these with self-contained,
+cross-referenced explanations.
+
+
+                  
+                  Navigation 
+                  
+                
+
+Published weeks appear under Course in the left explorer (and below). Each
+week page links its three PDFs and the concepts introduced that week.
+
+
+
+
+---
+
+# Syllabus and course guide
+URL: https://AndreuCecilia.github.io/rl-robotics/course/syllabus
+
+Reinforcement Learning in Robotics — Syllabus
+240MAR45 · MSc in Automatic Control and Robotics · UPC Barcelona
+Format: 15 weeks × (1.5 h theory + 1.5 h practical) = 45 h, partial exam in Week 8
+Prerequisites: optimal control, linear systems, basic probability, Python
+Course philosophy
+This course presents reinforcement learning from a control engineering
+perspective: as approximate dynamic programming under uncertainty about the
+dynamics, with direct policy search as a parallel paradigm. You already know
+LQR, Riccati, Bellman, and MPC — the course builds on that scaffolding rather
+than starting from scratch.
+Two messages run through the semester:
+
+RL is one tool among several. Competent robotics engineering means knowing
+when to use RL and when to compose it with classical methods (SysID, MPC,
+residual learning).
+Fewer ideas, presented deeply, with more connections beats a survey.
+Some fashionable topics (distributional RL, MuZero, decision transformers,
+multi-agent RL, foundation models for control) are pointed to in Week 15 but
+not developed.
+
+Weekly schedule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WeekTheoryPractical1Optimal control, Bellman equation, the unifying diagramSetup verification; value iteration on a gridworld2LQR, the underactuated pendulum, MPC as receding-horizon DPLQR on cart-pole; LQR swing-up failure; basic MPC3MDPs, Bellman operators as contractions, curse of dimensionalityContraction proofs; policy iteration on a stochastic MDP4What RL is and isn’t; bandits, exploration, safetyε-greedy, UCB, Thompson; regret curves5TD learning as stochastic approximationTD(0) and TD(λ); convergence vs. λ6SARSA, Q-learning, and REINFORCE as siblingsQ-learning vs. REINFORCE on the same problem7Function approximation, the deadly triad, DQNBaird’s counterexample; DQN on CartPole with ablation8Partial exam (Weeks 1–7)No lab — optional office hours and project group formation9Policy gradient with function approximation; baselines, GAEREINFORCE variance study; cumulative project starts10Actor-critic as synthesis; the algorithm design spaceMilestone 1 due — PPO + SAC analysis11Model-based RL, MPC + learned models, SysIDMilestone 2 — learned dynamics + MPC12Sim-to-real, residual RL, offline RLMilestone 3 — offline RL, extrapolation error13Safe RL and reward engineeringMilestone 4 — constrained policy optimization14Buffer: imitation learning or reviewMilestone 5 (optional) — BC + DAgger15Synthesis; what the literature won’t tell youProject presentations
+Assessment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ComponentWeightExercises Weeks 1–715%Partial exam Week 8 (Weeks 1–7)20%Cumulative project (milestones 20% + report 15% + presentation 5%)40%Final exam25%
+
+Final exam: conceptual, covering the full course with emphasis on Weeks
+9–14, organized around the failure-modes framework — which failure mode a
+method addresses, why, and at what cost. No algorithmic recitation.
+Exercises from Week 9 onward are formative (not graded): the cumulative
+project takes over the assessed practical workload.
+Final project performance does not affect the grade. Depth of analysis and
+quality of comparison are what’s evaluated — a group whose SAC run fails but
+who analyze why thoughtfully scores higher than one that copies working code
+without understanding it.
+
+Cumulative project — Five Methods, One Task
+From Week 9, groups of 2–3 apply successive method families to one task: a
+planar 2-DOF manipulator reaching a target while avoiding an obstacle, under
+torque bounds (fallback: pendulum swing-up with torque limit).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MilestoneWeekTaskWeight19–10PPO + SAC model-free baselines5%211Model-based RL + MPC with learned dynamics5%312Offline RL — naive Q-learning failure + CQL/IQL5%413Safe RL — CPO or Lagrangian-PPO5%514Imitation learning — BC + DAgger (optional)replaces lowest milestone grade
+Final deliverables (Week 15): an 8–12 page report centered on a cross-method
+comparison (sample complexity, final performance, constraint satisfaction) and
+a 15-minute presentation. A reference-results bundle (checkpoints, datasets,
+learned models) is distributed before Week 10 so any group can rejoin the chain
+at any milestone — use it only if your own artifact doesn’t work.
+All milestones are doable on a laptop CPU for at least one configuration; most
+training runs as homework, lab time is for analysis and comparison.
+Practical sessions
+Every practical ships as a Jupyter notebook with the environment, logging,
+plotting, and known-good hyperparameters pre-written. You complete the
+conceptual cores: loss functions, update rules, gradient computations. A
+30-second smoke test at the top verifies your setup before you start.
+One pinned software stack, distributed Week 1 and unchanged all semester:
+numpy, scipy, matplotlib, gymnasium, PyTorch, stable-baselines3,
+mujoco/pybullet, python-control.
+Reading list
+
+Bertsekas, Reinforcement Learning and Optimal Control (2019) — spine reference
+Meyn, Control Systems and Reinforcement Learning (2022)
+Recht, “A Tour of Reinforcement Learning: The View from Continuous Control” — read Week 1, reread Week 15; if it feels easy by then, the course worked
+Sutton &amp; Barto, Reinforcement Learning: An Introduction (2nd ed.) — used selectively
+Tedrake, Underactuated Robotics (free online) — pendulum and MPC material
+Original papers per method (DQN, PPO, SAC, CQL, CPO, DAgger) — read the originals for methods you use in the project
+
+Weekly reading assignments appear on each week’s study pack page.
+
+---
+
+# RL in Robotics — Student Companion
+URL: https://AndreuCecilia.github.io/rl-robotics/index
+
+Reinforcement Learning in Robotics
+240MAR45 · MSc in Automatic Control and Robotics · UPC Barcelona
+This is the student companion site for the course: an interlinked knowledge base
+of the core concepts, plus links to lecture notes, exercises, and practicals.
+
+
+                  
+                  How to use this site 
+                  
+                
+
+Concepts are written to be self-contained and cross-linked. Start from
+the unifying diagram below and follow the [[links]] by concept dependency,
+not by lecture order. Use the search (top right) or the graph view to navigate.
+
+
+The unifying diagram
+Every method in this course lives in one cell of this table — what do we know
+about the dynamics, and what are we trying to learn?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Model knownModel unknownValue-basedDP / LQRQ-learning, DQNPolicy-basediLQRPolicy gradient (REINFORCE)HybridMPCActor-critic, Dyna
+Method names become links as their concept notes are published over the semester.
+Weekly materials
+Weekly study packs — slides, lecture notes, and exercises for
+each week, released before the session.
+Course information
+Syllabus and course guide — schedule, assessment, the
+cumulative project, software stack, and reading list.
+Start here
+
+Bellman equation — optimality as a fixed-point recursion; the foundation
+underlying every method in the course.
+Deadly triad — why function approximation, bootstrapping, and off-policy
+learning together can diverge.
+Failure modes of approximate RL — the six failure modes that organize the
+second half of the course.
+
+Studying with an AI assistant
+This site is built to be AI-readable. To give your assistant (Claude Code,
+Codex, ChatGPT, …) the full course context:
+
+Best: clone the published site and run your assistant inside it —
+everything works offline, weekly PDFs included:
+git clone github.com/AndreuCecilia/rl-robotics
+Or point it at a single URL containing the full text of every published page:
+andreucecilia.github.io/rl-robotics/llms-full.txt
+(short index: /llms.txt · machine-readable: /static/contentIndex.json)
+
+
+
+                  
+                  Use it to understand, not to outsource 
+                  
+                
+
+Ask your assistant to explain, quiz you, and check your derivations — not to
+produce your exercise or milestone answers. Graded work is evaluated on your
+depth of analysis, and the exams are written without an assistant:
+understanding you didn’t build yourself won’t survive them.
+
+
+Course framing
+This course treats RL as approximate dynamic programming under uncertainty
+about the dynamics. If you know LQR, Riccati, Bellman, and MPC, you already
+have most of the scaffolding — RL fills in what to do when the model is unknown
+or the state space is too large to solve exactly. RL is presented as one tool
+among several, not a replacement for classical control.
+
+---
+
+# 04_Concepts
+URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/index
+
+
+
