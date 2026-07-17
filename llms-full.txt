@@ -221,6 +221,7 @@ week page links the concepts introduced that week.
 # Syllabus and course guide
 URL: https://AndreuCecilia.github.io/rl-robotics/course/syllabus
 
+
 Reinforcement Learning in Robotics — Syllabus
 240MAR45 · MSc in Automatic Control and Robotics · UPC Barcelona
 Format: 15 weeks × (1.5 h theory + 1.5 h practical) = 45 h, partial exam in Week 8
