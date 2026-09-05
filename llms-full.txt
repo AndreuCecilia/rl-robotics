@@ -4069,238 +4069,13 @@ Practical: none
 
 ---
 
-# Syllabus and course guide
-URL: https://AndreuCecilia.github.io/rl-robotics/course/syllabus
-
-
-Reinforcement Learning in Robotics: Syllabus
-240MAR45 · MSc in Automatic Control and Robotics · UPC Barcelona
-Format: 15 weeks × (1.5 h theory + 1.5 h practical) = 45 h, partial exam in Week 8
-Prerequisites: optimal control, linear systems, basic probability, Python
-Course philosophy
-This course presents reinforcement learning from a control engineering
-perspective: as approximate dynamic programming under uncertainty about the
-dynamics, with direct policy search as a parallel paradigm. You already know
-LQR, Riccati, Bellman, and MPC, and the course builds on that scaffolding
-rather than starting from scratch.
-Two messages run through the semester:
-
-RL is one tool among several. Competent robotics engineering means knowing
-when to use RL and when to compose it with classical methods (SysID, MPC,
-residual learning).
-Fewer ideas, presented deeply, with more connections beats a survey.
-Some fashionable topics (distributional RL, MuZero, decision transformers,
-multi-agent RL, foundation models for control) are pointed to in Week 15 but
-not developed.
-
-Weekly schedule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-WeekTheoryPractical1Optimal control, Bellman equation, the unifying diagramSetup verification; value iteration on a gridworld2LQR, the torque-limited pendulum, MPC as receding-horizon DPLQR on cart-pole; LQR swing-up failure; basic MPC3MDPs, Bellman operators as contractions, curse of dimensionalityContraction proofs; policy iteration on a stochastic MDP4What RL is and isn’t; bandits, exploration, safetyε-greedy, UCB, Thompson; regret curves5TD learning as stochastic approximationTD(0) and TD(λ); convergence vs. λ6SARSA, Q-learning, and REINFORCE as siblingsQ-learning vs. REINFORCE on the same problem7Function approximation, the deadly triad, DQNBaird’s counterexample; DQN on CartPole with ablation8Partial exam (Weeks 1–7)No lab, optional office hours and project group formation9Policy gradient with function approximation; Monte-Carlo baselinesREINFORCE variance study; cumulative project starts10Actor-critic as synthesis; the critic, GAE, the algorithm design spaceMilestone 1 due: PPO + SAC analysis11Model-based RL, MPC + learned models, SysIDMilestone 2: learned dynamics + MPC12POMDPs and belief states, sim-to-real, residual RL, offline RLMilestone 3: offline RL, extrapolation error13Safe RL and reward engineeringMilestone 4: constrained policy optimization14Buffer: imitation learning or reviewMilestone 5 (optional): BC + DAgger15Synthesis; what the literature won’t tell youProject presentations
-Assessment
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ComponentWeightExercises Weeks 1–715%Partial exam Week 8 (Weeks 1–7)20%Cumulative project (milestones 20% + report 15% + presentation 5%)40%Final exam25%
-
-Final exam: conceptual, covering the full course with emphasis on Weeks
-9–14, organized around the failure-modes framework: which failure mode a
-method addresses, why, and at what cost. No algorithmic recitation.
-Exercises from Week 9 onward are formative (not graded): the cumulative
-project takes over the assessed practical workload.
-Final project performance does not affect the grade. Depth of analysis and
-quality of comparison are what’s evaluated. A group whose SAC run fails but
-who analyze why thoughtfully scores higher than one that copies working code
-without understanding it.
-
-Cumulative project: Five Methods, One Task
-From Week 9, groups of 2–3 apply successive method families to one task: a
-planar 2-DOF manipulator reaching a target while avoiding an obstacle, under
-torque bounds (fallback: pendulum swing-up with torque limit).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-MilestoneWeekTaskWeight19–10PPO + SAC model-free baselines5%211Model-based RL + MPC with learned dynamics5%312Offline RL: naive Q-learning failure + CQL/IQL5%413Safe RL: CPO or Lagrangian-PPO5%514Imitation learning: BC + DAgger (optional)replaces lowest milestone grade
-Final deliverables (Week 15): an 8–12 page report centered on a cross-method
-comparison (sample complexity, final performance, constraint satisfaction) and
-a 15-minute presentation. A reference-results bundle (checkpoints, datasets,
-learned models) is distributed before Week 10 so any group can rejoin the chain
-at any milestone. Use it only if your own artifact doesn’t work.
-All milestones are doable on a laptop CPU for at least one configuration; most
-training runs as homework, lab time is for analysis and comparison.
-Practical sessions
-Every practical ships as a Jupyter notebook with the environment, logging,
-plotting, and known-good hyperparameters pre-written. You complete the
-conceptual cores: loss functions, update rules, gradient computations. A
-30-second smoke test at the top verifies your setup before you start.
-One pinned software stack, distributed Week 1 and unchanged all semester:
-numpy, scipy, matplotlib, gymnasium, PyTorch, stable-baselines3,
-mujoco/pybullet, python-control.
-Reading list
-
-Bertsekas, Reinforcement Learning and Optimal Control (2019): spine reference
-Meyn, Control Systems and Reinforcement Learning (2022)
-Recht, “A Tour of Reinforcement Learning: The View from Continuous Control”: read Week 1, reread Week 15; if it feels easy by then, the course worked
-Sutton &amp; Barto, Reinforcement Learning: An Introduction (2nd ed.): used selectively
-Tedrake, Underactuated Robotics (free online): pendulum and MPC material
-Original papers per method (DQN, PPO, SAC, CQL, CPO, DAgger): read the originals for methods you use in the project
-
-Weekly reading assignments appear with the materials on the official university
-course page.
-
----
-
 # RL in Robotics — Student Companion
 URL: https://AndreuCecilia.github.io/rl-robotics/index
 
 Reinforcement Learning in Robotics
 240MAR45 · MSc in Automatic Control and Robotics · UPC Barcelona
-This is the student companion site for the course: an interlinked knowledge base
-of the core concepts. The materials themselves (slides, lecture notes, exercises,
-code) are distributed on the official university course page, not here.
+This is the concept knowledge base for the course: one self-contained note per
+idea, interlinked so you can follow a thread rather than a lecture order.
 
 
                   
@@ -4363,21 +4138,15 @@ bootstrapping, not “has a value function”.
 The columns are the ends of a spectrum, not a binary: robotics usually sits in
 between, with a model partly known and partly learned.
 Method names become links as their concept notes are published over the semester.
-Course materials
-Slides, lecture notes, exercises, and code are distributed on the official
-university course page, released before each session.
-Course information
-Syllabus and course guide: schedule, assessment, the
-cumulative project, software stack, and reading list.
 Start here
 
 
-Bellman equation — optimality as a fixed-point recursion; the foundation
-underlying every method in the course.
-Deadly triad: why function approximation, bootstrapping, and off-policy
-learning together can diverge. Published with Week 7.
-Failure modes of approximate RL: the six failure modes that organize the
-second half of the course. Published with Week 7.
+Bellman equation — optimality as a fixed-point recursion, underlying every
+method here.
+Deadly triad — why function approximation, bootstrapping and off-policy
+learning together can diverge.
+Failure modes of approximate RL — the six failure modes that organise the
+rest of the knowledge base.
 
 Studying with an AI assistant
 This site is built to be AI-readable. To give your assistant (Claude Code,
@@ -4414,13 +4183,6 @@ among several, not a replacement for classical control.
 
 # 04_Concepts
 URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/index
-
-
-
----
-
-# Course
-URL: https://AndreuCecilia.github.io/rl-robotics/course/index
 
 
 
