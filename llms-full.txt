@@ -41,10 +41,10 @@ The advantage estimator: Schulman et al. (2016)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §2 (the derivation), §3 (the dial, measured), §4 (the price)
+Exercises: Week10 Q10.1, Q10.4, Q10.6, Q10.7, Q10.8
+Practical: Week10, Project Milestone 1
 
 
 ---
@@ -90,10 +90,10 @@ Original use of the term: Baird (1993), advantage updating
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week09 §3.6 (named as the consequence of the baseline); Week10 §2.3, §2.4, §3.1
+Exercises: Week10 Q10.3, Q10.4, Q10.5
+Practical: Week10
 
 
 ---
@@ -129,10 +129,10 @@ At scale: van Hasselt et al. (2018), Deep reinforcement learning and the deadly 
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §3.2
+Exercises: Week07 Q7.1, Q7.5, Q7.6
+Practical: Week07
 
 
 ---
@@ -167,10 +167,10 @@ Secondary: Sutton &amp; Barto (2018), Ch. 2, for the incremental update in the f
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §2
+Exercises: Week04 Q4.6
+Practical: Week04
 
 
 ---
@@ -211,10 +211,10 @@ Variance bounds and the optimal baseline: Greensmith, Bartlett &amp; Baxter (200
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week09, Week10
+Lecture notes: Week06 §4.4 (the gap); Week09 §3.3, §3.4, §3.5, §3.6, §3.7; Week10 §2.1 (the one-line change that turns it into a critic)
+Exercises: Week06 Q6.5; Week09 Q9.1, Q9.2, Q9.4
+Practical: Week09
 
 
 ---
@@ -249,10 +249,10 @@ Secondary: Gittins (1979) for the index solution in the bandit case; Feldbaum (1
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §5.4
+Exercises: Week04 Q4.8
+Practical: none
 
 
 ---
@@ -291,10 +291,10 @@ Classical control analogue: Anderson &amp; Moore, Optimal Control, Ch. 2
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01
+Lecture notes: Week01
+Exercises: Week01 Q1.3, Q3.1
+Practical: Week01
 
 
 ---
@@ -336,10 +336,10 @@ Contraction under approximation: Tsitsiklis &amp; Van Roy (1997)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week03, Week05
+Lecture notes: Week01 §3.4–3.6; Week03 §3.4–3.6 (contraction proved); Week05 §1.4 (T^pi defined), §2.3 (applied from samples)
+Exercises: Week01 Q3.1; Week03 Q3.2
+Practical: Week01
 
 
 ---
@@ -376,10 +376,10 @@ Secondary: Williams &amp; Baird (1993), on the residual-to-error relationship
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week03
+Lecture notes: Week03 §4.3
+Exercises: Week03 Q3.1, Q3.4, Q3.6
+Practical: Week03
 
 
 ---
@@ -418,10 +418,10 @@ Secondary: Kearns &amp; Singh (2000), on bias-variance error bounds for temporal
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05, Week09, Week10
+Lecture notes: Week05 §3.3, §4.3; Week09 §4.1; Week10 §3 (the dial, measured at three critics and over a full run)
+Exercises: Week05 Q5.7; Week09 Q9.1; Week10 Q10.4
+Practical: Week05
 
 
 ---
@@ -461,10 +461,10 @@ Divergence under approximation: Tsitsiklis &amp; Van Roy (1997)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05, Week06, Week07, Week10
+Lecture notes: Week05 §1.4, §5.2; Week06 §5.1, §5.3 (what bootstrapping bought, priced in transitions); Week07 §3.1 (the first ingredient of the triad); Week10 §2.1, §3.3 (the substitution that defines a critic, and the flat exact-critic curve)
+Exercises: Week05 Q5.1; Week06 Q6.3
+Practical: Week05, Week06
 
 
 ---
@@ -491,10 +491,10 @@ Related concepts
 Trust region | PPO | CMDP | Safe RL | Safe exploration | Actor-critic | Design-space diagram | Control barrier function (CBF) | Reward engineering
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §5.2
+Exercises: none
+Practical: none
 
 
 ---
@@ -534,10 +534,10 @@ Secondary: Anderson &amp; Moore, Optimal Control: Linear Quadratic Methods (LQG 
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02, Week04, Week05, Week11
+Lecture notes: Week02 §2.6; Week04 §1.5, §1.6 (the boundary, with the dual effect priced); Week05 §3.4 (batch TD as certainty equivalence on a chain)
+Exercises: Week02 Q2.1; Week04 Q4.1, Q4.8
+Practical: none
 
 
 ---
@@ -576,10 +576,10 @@ Secondary: Anderson &amp; Moore, Optimal Control: Linear Quadratic Methods, Ch. 
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02, Week07
+Lecture notes: Week02 §2.2; Week07 §2.5 (the backup leaves the family, and the fit is what carries no guarantee)
+Exercises: Week02 Q2.2
+Practical: none
 
 
 ---
@@ -622,10 +622,10 @@ Course companion: 00_Meta/teaching_companion.md §3
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week02, Week03, Week09, Week11
+Lecture notes: Week01 §1.1, §5.1; Week02; Week03 §1; Week09 §5.2, §5.3
+Exercises: none
+Practical: none
 
 
 ---
@@ -658,10 +658,10 @@ Secondary: Sutton &amp; Barto (2018), §2.9
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §5.2
+Exercises: none
+Practical: none
 
 
 ---
@@ -700,10 +700,10 @@ Secondary: Levine et al. (2020), on coverage and concentrability in the offline 
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05, Week06, Week09
+Lecture notes: Week05 §2.4; Week06 §1.4, §3.4 (the condition restated on state-action pairs); Week09 §4.2 (the visiting measure inside the gradient)
+Exercises: Week05 Q5.2; Week06 Q6.2
+Practical: Week05, Week06
 
 
 ---
@@ -749,10 +749,10 @@ The bias of a bootstrapped advantage estimate: Schulman et al. (2016), §3
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §2.1, §2.2, §2.3 (the derivation, the definition and the bias)
+Exercises: Week10 Q10.2, Q10.3, Q10.5, Q10.8
+Practical: Week10
 
 
 ---
@@ -801,10 +801,10 @@ Secondary: Powell, Approximate Dynamic Programming (2011), Ch. 1
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week03
+Lecture notes: Week01 §2.5; Week03 §6
+Exercises: Week01 Q3.2; Week03 Q3.3, Q3.7
+Practical: Week03
 
 
 ---
@@ -843,10 +843,10 @@ Reproducibility: Henderson et al. (2018)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §5.3
+Exercises: none
+Practical: Week10
 
 
 ---
@@ -884,10 +884,10 @@ On what a published number establishes: Henderson et al. (2018)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §4.3 to §4.8
+Exercises: Week07 Q7.2, Q7.3, Q7.7
+Practical: Week07
 
 
 ---
@@ -925,10 +925,10 @@ Measured at scale: van Hasselt et al. (2018)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07, Week10
+Lecture notes: Week07 §3; Week10 §4.1 (the legs counted for actor-critic, on-policy and off)
+Exercises: Week07 Q7.1, Q7.4, Q7.6
+Practical: Week07
 
 
 ---
@@ -992,10 +992,10 @@ The algorithms placed on it: Schulman et al. (2015, 2017); Lillicrap et al. (201
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10 onward
+Lecture notes: Week10 §5.1
+Exercises: none
+Practical: Week10
 
 
 ---
@@ -1057,10 +1057,10 @@ Secondary: Sutton &amp; Barto (2nd ed.), Ch. 3
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week03
+Lecture notes: Week01 §3.3; Week03 §2.5
+Exercises: Week01 challenge problem; Week03 challenge problem
+Practical: Week01
 
 
 ---
@@ -1099,10 +1099,10 @@ On the normalisation conventions and the missing \gamma^t in implementations: Th
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week09
+Lecture notes: Week09 §2.1, §2.3, §4.2
+Exercises: none
+Practical: Week09
 
 
 ---
@@ -1133,10 +1133,10 @@ Related concepts
 Torque-limited pendulum | Offline RL | Failure modes of approximate RL | Sim-to-real gap | DQN | Policy gradient (REINFORCE) | Stationary distribution | Projected Bellman equation | Experience replay | Baird’s counterexample | Coverage
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02, Week07, Week09, Week11
+Lecture notes: Week02 §3.3, §3.5; Week07 §2.4, §3.2, §4.9; Week09 §4.2
+Exercises: Week07 Q7.2
+Practical: none
 
 
 ---
@@ -1170,53 +1170,10 @@ Secondary: Åström &amp; Wittenmark, Adaptive Control, on certainty equivalence
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
-
-
----
-
-# Dyna
-URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/dyna
-
-Dyna
-Spend the model as a data source: run the ordinary Q-learning update on real transitions, and run the identical update n more times per step on transitions drawn from \hat P.
-Where it sits
-
-Unifying diagram cell: a value function × a learned model, the middle column’s value row, alongside value iteration on \hat P
-Bellman object approximated: \mathcal{T}, on a mixture of sampled and imagined transitions. The imagined half applies \mathcal{T} to a fitted kernel and inherits its bias
-Failure mode addressed: sample efficiency. It is off-policy by construction, so it carries the Off-policy learning leg of the Deadly triad into whatever approximator the Q update uses
-Course first appearance: Week 11
-
-Core idea
-The middle column does not require a new learner. Take the Week 6 tabular control algorithm, fit a model from the transitions it is already producing, and let the same update consume transitions the model invents. The learner has no way to tell the two sources apart, which is the whole design and the whole risk in one sentence.
-Formal definition
-Dyna-Q, one real transition and n imagined ones. Act \varepsilon-greedily on Q and observe (x,u,r,x&#039;), then
-Q(x,u) \leftarrow Q(x,u) + \alpha\big(r + \gamma\max_{u&#039;}Q(x&#039;,u&#039;) - Q(x,u)\big) \quad \text{(real data)},
-update \hat P(\cdot\mid x,u) and \hat r(x,u) with the observed transition, and repeat n times: sample a visited pair (\tilde x,\tilde u), draw \tilde x&#039;\sim\hat P and \tilde r = \hat r, and apply
-Q(\tilde x,\tilde u) \leftarrow Q(\tilde x,\tilde u) + \alpha\big(\tilde r + \gamma\max_{u&#039;}Q(\tilde x&#039;,u&#039;) - Q(\tilde x,\tilde u)\big) \quad \text{(imagined data)}.
-The two updates are the same line of code, and the only difference is where the transition came from. The imagined transitions come from wherever the model is queried, which is what makes the method off-policy.
-MBPO keeps this structure and fixes the part that breaks at scale, by starting short rollouts from visited states instead of querying the model at pairs the data never reached.
-Connection to classical control
-This is a simulator in the loop, with the simulator identified online from the plant it is wrapped around. The classical version is tuning a controller against a nominal model between experiments, and the classical caution transfers unchanged. Time spent optimising against a model is time spent optimising against its errors, so the value of the imagined data is bounded by how far the model can be trusted at the states being imagined.
-Key limitation
-Nothing in the update distinguishes an imagined transition from a real one, so an error in \hat P propagates into Q with the full weight of n imagined updates per real step. The model is queried at pairs chosen by the sampler rather than by the plant, so the query distribution and the data distribution come apart, which is the mechanism Distribution shift names. On a continuous plant the tabular count model behind the vanilla algorithm does not exist in this form at all.
-Related concepts
-Model-based RL | MBPO | Q-learning | Model bias | Off-policy learning | Experience replay | Distribution shift | Unifying diagram | Deadly triad | Epsilon-greedy
-References
-
-Primary: Sutton &amp; Barto (2018), Ch. 8.2–8.4
-Original: Sutton (1990)
-Modern successor: Janner et al. (2019)
-
-Appears in
-
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §1.5, §1.6
+Exercises: Week04 Q4.1, Q4.8
+Practical: none
 
 
 ---
@@ -1252,10 +1209,10 @@ Original: Bellman (1957), Dynamic Programming
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01
+Lecture notes: Week01 §2.4–2.5
+Exercises: Week01 Q2.1, Q2.2, Q3.2
+Practical: none
 
 
 ---
@@ -1295,10 +1252,10 @@ Original paper: Sutton (1988) for TD(\lambda); Singh &amp; Sutton (1996) for rep
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05
+Lecture notes: Week05 §4.1, §4.2, §4.3
+Exercises: Week05 Q5.5, Q5.7, Q5.8
+Practical: Week05
 
 
 ---
@@ -1338,10 +1295,10 @@ Original: the swing-up energy-pumping law is generally attributed to Åström &a
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02
+Lecture notes: Week02 §3.6
+Exercises: none
+Practical: none
 
 
 ---
@@ -1381,10 +1338,10 @@ Secondary: Lattimore &amp; Szepesvári, Bandit Algorithms (2020), Ch. 6, for the
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04, Week06
+Lecture notes: Week04 §3.1, §3.2; Week06 §1.4, §2.4 (the state-dependent form and its fixed point)
+Exercises: Week04 Q4.6, Q4.7; Week06 Q6.4
+Practical: Week04, Week06
 
 
 ---
@@ -1418,10 +1375,10 @@ The logged case: Levine et al. (2020)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week06 §3.4; Week07 §4.4, §4.6, §4.9
+Exercises: Week07 Q7.2, Q7.7
+Practical: Week07
 
 
 ---
@@ -1460,10 +1417,10 @@ Fixed-point analysis of on-policy control: Singh, Jaakkola, Littman &amp; Szepes
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06
+Lecture notes: Week06 §2.4, §3.5
+Exercises: Week06 Q6.1, Q6.4, Q6.8
+Practical: Week06
 
 
 ---
@@ -1498,10 +1455,10 @@ Secondary: Recht (2019), A Tour of Reinforcement Learning: The View from Continu
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04, Week11
+Lecture notes: Week04 §1
+Exercises: Week04 Q4.1
+Practical: Week04
 
 
 ---
@@ -1605,10 +1562,10 @@ Distribution shift: Levine et al. (2020)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07 onward, opening every theory session; Week09 (mode 2 highlighted), Week10 (modes 1 and 2 highlighted together), Week11 (mode 5 signed for)
+Lecture notes: Week07 §5.2; Week09 §1.2, §3.1 (mode 2 given its mechanism and its number); Week10 §1.1 (two modes marked at once, and the price named with them)
+Exercises: Week07 Q7.3
+Practical: none
 
 
 ---
@@ -1644,10 +1601,10 @@ Operator-first treatment: Bertsekas (2019), Ch. 6
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week07
+Lecture notes: Week01; Week07 §1, §2.1, §4.2
+Exercises: Week07 Q7.4, challenge
+Practical: none
 
 
 ---
@@ -1689,10 +1646,10 @@ Original paper: Schulman, Moritz, Levine, Jordan &amp; Abbeel (2016), High-dimen
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05 (the \lambda-return); Week10 (the dial and the three measured panels)
+Lecture notes: Week05 §3.3; Week10 §3.1 to §3.5
+Exercises: Week10 Q10.4, Q10.6
+Practical: Week10
 
 
 ---
@@ -1730,10 +1687,10 @@ Original statement: Singh, Jaakkola, Littman &amp; Szepesvari (2000), Convergenc
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06
+Lecture notes: Week06 §1.5, §2.3
+Exercises: Week06 Q6.2, Q6.6, Q6.8
+Practical: Week06
 
 
 ---
@@ -1774,10 +1731,10 @@ On squashed policies and the entropy coupling: Haarnoja et al. (2018)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week09
+Lecture notes: Week09 §2.5, §5.2
+Exercises: Week09 Q9.5, Q9.8
+Practical: Week09
 
 
 ---
@@ -1843,10 +1800,10 @@ Adaptive-control parallel: Astrom &amp; Wittenmark, Adaptive Control, on self-tu
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06, Week10
+Lecture notes: Week06 §1.3; Week10 §2.6 (the fourth row, both steps approximated)
+Exercises: Week06
+Practical: Week06, Week10
 
 
 ---
@@ -1883,10 +1840,10 @@ Viscosity solutions: Crandall &amp; Lions (1983)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01
+Lecture notes: Week01 §4
+Exercises: none
+Practical: none
 
 
 ---
@@ -1923,10 +1880,10 @@ It is well established in simulation as the change-of-measure or likelihood-rati
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week09
+Lecture notes: Week09 §4.2
+Exercises: none
+Practical: none
 
 
 ---
@@ -1963,10 +1920,10 @@ Course level: the convergence result is stated and not proved; the worked scalar
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week09
+Lecture notes: Week09 §5.3
+Exercises: Week09 Q9.7
+Practical: Week09
 
 
 ---
@@ -2011,10 +1968,10 @@ Software: control.dare (python-control) for reference solutions
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week02
+Lecture notes: Week01 §2.6, §4; Week02 §2
+Exercises: Week01 Q2.1, Q3.2; Week02 Q2.1, Q2.2, Q3.1
+Practical: Week01, Week02
 
 
 ---
@@ -2053,10 +2010,10 @@ Primary: Bertsekas (2019), Ch. 6
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §2.7
+Exercises: Week07 Q7.5, challenge
+Practical: none
 
 
 ---
@@ -2097,50 +2054,10 @@ Background: the identity is standard in simulation optimisation, where it is kno
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
-
-
----
-
-# MBPO
-URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/mbpo
-
-MBPO
-Dyna with the funnel kept shut: branch short imagined rollouts from states the plant actually visited, so the model is never asked a question whose horizon exceeds what its one-step error can support.
-Where it sits
-
-Unifying diagram cell: a learned model feeding a model-free learner. The learner is an actor-critic in the published version, so the pair sits in the middle column’s bottom row
-Bellman object approximated: \mathcal{T}^\pi for the critic it feeds, on a mixture of real and imagined transitions
-Failure mode addressed: sample efficiency, and failure mode 5 by the first of the three repairs, since a short rollout is a bound on how far the one-step error is allowed to compound
-Course first appearance: Week 11
-
-Core idea
-The certainty-equivalence bound charges the one-step model error over the whole horizon, so the length of the imagined rollout is the parameter that decides how much of that error the plan inherits. Shortening the rollout is a repair that leaves the model alone, which is what makes it usable on a model everybody already knows to be wrong. Re-planning from a measured state is the same idea applied at the other end, since it re-measures before the accumulation gets going.
-Formal definition
-Keep the Dyna structure, and change where the imagined transitions start and how long they run. Sample a state x from the real replay buffer, roll the learned model forward for k steps under the current policy with k small, add those k transitions to the model buffer, and train the model-free learner on a mixture of the real and model buffers. The parameter k is chosen against the model’s measured accuracy rather than against the task horizon, and the branch point is always a state the plant produced, which is what keeps the query distribution close to the data distribution.
-Anchor numbers
-On MuJoCo benchmarks MBPO reaches the asymptotic performance of SAC with roughly an order of magnitude fewer environment steps, and ensemble-based MPC learns half-cheetah in around 10^{5} steps where model-free methods used millions. Both papers also report the ceiling, where the model-based curve flattens as the model class runs out, which is the published version of the flat identified curve measured on the course’s own swing-up chain.
-Connection to classical control
-Bounding the prediction horizon by what the model can support is the horizon choice of MPC made explicit as a model-accuracy decision. The classical statement is that a plan is only as long as the model is trustworthy, and receding-horizon control answers it by re-solving from a measured state. MBPO answers it by branching from a measured state, which is the same argument with the plan replaced by training data.
-Key limitation
-Shortening the rollout costs the model its ability to answer long-horizon questions, so the burden of the tail moves back onto the model-free learner and its critic. The rollout length is a hyperparameter with no first-principles setting, and the same is true of the pessimism parameter in the uncertainty-based repair it is usually paired with. It also leaves the class-error half of Model bias untouched, since a short rollout inside a model that cannot express the plant is still a rollout inside a model that cannot express the plant.
-Related concepts
-Model-based RL | Dyna | Model bias | MPC | SAC | Actor-critic | Experience replay | Distribution shift | PILCO | Sample complexity
-References
-
-Original: Janner et al. (2019), When to trust your model
-Ensemble MPC comparison: Chua et al. (2018)
-Ancestor: Sutton (1990); Sutton &amp; Barto (2018), Ch. 8
-
-Appears in
-
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06; Week09
+Lecture notes: Week06 §4.2; Week09 §2.4, §3.4
+Exercises: Week06 Q6.5; Week09 Q9.4
+Practical: Week06
 
 
 ---
@@ -2211,10 +2128,10 @@ Secondary: Meyn, Control Systems and Reinforcement Learning (2022), Ch. 1–2; S
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week03
+Lecture notes: Week03 §2
+Exercises: Week03 Q3.6
+Practical: Week03
 
 
 ---
@@ -2256,10 +2173,10 @@ Secondary: Bertsekas (2019), Ch. 2 — MPC as approximate dynamic programming wi
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02, Week03, Week11
+Lecture notes: Week02 §4; Week03 §1 (the three gaps, amortisation)
+Exercises: Week02 Q1.2, Q2.2(c), Q3.2
+Practical: Week02
 
 
 ---
@@ -2294,10 +2211,10 @@ Secondary: Sutton &amp; Barto (2nd ed.), Ch. 3
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week03
+Lecture notes: Week01 §2.1, §2.5; Week03 §2.4
+Exercises: Week01 Q1.2
+Practical: none
 
 
 ---
@@ -2334,99 +2251,10 @@ Primary: Sutton &amp; Barto (2018), Section 6.7
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
-
-
----
-
-# Model bias
-URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/model-bias
-
-Model bias
-Systematic error in \hat P that the planner is free to exploit, so the deployed policy is selected by the difference \hat J - J wherever that difference is large and positive: failure mode 5 of the course taxonomy.
-Where it sits
-
-Unifying diagram cell: cross-cutting, and specific to the left-hand column together with the learned-model middle column that opens in Week 11. It is the price of replacing an analytical f by a fitted one
-Bellman object approximated: none of its own. It corrupts whichever object the planner applies, which for MPC is \mathcal{T} over a truncated horizon, for iLQR is \mathcal{T} on a local quadratic model, and for Model-based RL is \mathcal{T} applied exactly inside a wrong kernel
-Failure mode addressed: none. It is failure mode 5, and Week 11 is the first session in the course whose method adds a row to the taxonomy
-Course first appearance: Week 2, planted twice inside the MPC section; formalised in Week 11
-
-Core idea
-A planner maximises inside its model, so it is drawn to whatever the model is optimistic about. That makes optimisation an adversary for the estimator, and it is why a model that is right in 99\% of the state space and wrong in one region is not 99\% as good. The wrong region is the one the planner goes to, on purpose, because it is where the model promises the most.
-Formal definition
-Fit \hat P, solve the surrogate MDP, and deploy \hat\pi^\star \in \arg\max_\pi \hat J(\pi). The selection step is the mechanism, since \hat\pi^\star is chosen to maximise \hat J and is evaluated on J. Data reduce the damage only in the directions the model class can move.
-Two kinds, and only one is fixed by data. Estimation error shrinks as \hat P sees more of the plant, which is the tabular count model’s descending curve. Class error does not, which is the identified model’s flat one. The optimism gap, the distance between \hat V^\star at the start states and the exact value of the plan that model deploys, is the diagnostic that separates them. A gap that closes with data is estimation error, and a gap that holds is class error.
-Why the error is paid over a horizon. The certainty-equivalence bound of Model-based RL charges the one-step error \varepsilon_P over the effective horizon squared, \gamma R_{\max}\varepsilon_P/(1-\gamma)^2, which is 2500 at \gamma=0.98. The bound is a supremum over every state and action, including the ones no data reached, so a model with a small average one-step error and one bad region satisfies no useful version of it.
-Three repairs, one per mechanism. Short rollouts branch from real states and never let the funnel open (MBPO), and cost the model its ability to answer long-horizon questions. Uncertainty, as an ensemble or a posterior, charges the planner for disagreement (PILCO, PETS), and costs compute plus a pessimism parameter nobody sets from first principles. Re-planning with margin re-solves from the measured state and tightens the constraints by what the model may be wrong by (robust MPC), and costs conservatism in exactly the amount you assumed.
-Anchor numbers
-On the 961-cell swing-up with the overspeed trip at -3000 and J^\star=-124.0, the identified model’s optimism gap holds at \mathbf{28.5} from 10^{3} transitions to 10^{6}. More data move \hat\rho around inside its grid and change nothing, because the missing disturbance is not a parameter the class has. The residual model’s gap closes instead, 84 at 300 transitions, 8.2 at 2.4\times10^{4}, 0.2 at 10^{6}. The identified plan is not clumsy about it. Its path costs \mathbf{-123.4}, marginally cheaper than the optimal policy’s -124.0, since it reaches the goal slightly faster. The whole deficit is the second bar, \mathbf{-22.5}, and 1.5\% of its episodes end on the trip. The margin the true plant needs was free in a model with no disturbance, so the plan spent it. The identified curve settles at -149.4 and Q-learning passes it at 5.4\times10^{5} transitions, which is failure mode 5 with an x-coordinate.
-Connection to classical control
-Certainty equivalence designs for the nominal plant. Robust and stochastic MPC design for a set of plants and pay for it with conservatism, and every repair above is a version of that trade. The reading is familiar from adaptive control, where an identifier that is confident about a plant it has not excited hands the redesign a model that is wrong in exactly the directions the redesign is about to move. What Week 11 adds to the classical statement is the selection step. A planner that optimises inside the estimate seeks the error out, because the estimate is where the promise of a better plan is coming from.
-Key limitation
-Naming the failure mode does not supply a diagnostic that works before deployment. The optimism gap is computable here because the exact value of the deployed plan is available by a linear solve on a 961-cell chain, and on a real robot that number is the one nobody has. None of the three repairs makes the model better, and each buys its protection with a parameter that has to be set by judgement. The closed loop also feeds the problem, since the controller that is running collects the next batch, so the model improves where the robot goes and nowhere else, which is the Distribution shift statement Week 12 takes up.
-Related concepts
-Model-based RL | System identification | MPC | MBPO | PILCO | Dyna | Certainty equivalence | Terminal cost approximation | Composition with classical control | Failure modes of approximate RL | Distribution shift | Residual RL | Sim-to-real gap | iLQR
-References
-
-Primary: Sutton &amp; Barto (2018), Ch. 8.3–8.4
-The bound: the simulation lemma, as in Kearns &amp; Singh (2002)
-Repairs: Janner et al. (2019) for rollout length; Chua et al. (2018) and Deisenroth &amp; Rasmussen (2011) for uncertainty
-
-Appears in
-
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
-
-
----
-
-# Model-based RL
-URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/model-based-rl
-
-Model-based RL
-Fit an approximate kernel \hat P(x&#039;\mid x,u) from interaction data and hand it to a planner, so that one real transition becomes a fact the planner can reuse at every state it later asks about.
-Where it sits
-
-Unifying diagram cell: it is the middle column, opened this week. Every row has an occupant. Value iteration on \hat P and Dyna fill the value row, PILCO and policies trained inside \hat f fill the policy row, and MPC with a learned \hat f and a learned V_f fills the bottom row
-Bellman object approximated: \mathcal{T}, applied exactly, inside a model that is wrong. Q-learning applies \mathcal{T} to sampled transitions and inherits their noise. Planning applies \mathcal{T} to a fitted kernel and inherits its bias, over and over, with no further contact with the plant
-Failure mode addressed: sample efficiency, which is failure mode 3 approached from one side, since the data are collected once instead of re-collected whenever the policy moves. This is the first method in the course that adds a row to the taxonomy, failure mode 5 (Model bias)
-Course first appearance: Week 11, planted as a column annotation in Week 1 and as the learned-f extension of MPC in Week 2
-
-Core idea
-Weeks 1 to 3 solved the control problem with P in hand, and every method since Week 4 has spent interaction to recover what P would have supplied. Building the model back explicitly is the third option, and it changes what the data buy. A sampled transition updates one table entry, while a fitted kernel answers a question at any state-action pair the planner poses. The split the week rests on is the estimation and control split of adaptive control. The stage cost, the goal region and the price of a trip are written by the engineer, and the dynamics are the part the plant supplies without consulting anyone.
-Formal definition
-Given data \mathcal{D}=\{(x_t,u_t,x_{t+1})\}, fit \hat P, then solve the surrogate MDP \widehat{\mathcal{M}}=(\mathcal{X},\mathcal{U},\hat P,\hat r,\gamma) and deploy its optimal policy,
-\hat\pi^\star \in \arg\max_\pi \hat J(\pi), \qquad \hat V^\star = \mathcal{T}_{\widehat{\mathcal{M}}}\hat V^\star .
-This is Certainty equivalence, with the estimate treated as the truth for the duration of the planning problem. When the cost is charged on the successor state the fitted kernel also fixes the expected one-step cost, \hat r(x,u) = -\ell(x,u) + \hat P(\cdot\mid x,u)^\top p, so a model that believes a penalised band is unreachable believes it is free.
-What the error costs. With \varepsilon_P=\sup_{x,u}\|P(\cdot\mid x,u)-\hat P(\cdot\mid x,u)\|_1 and |r|\le R_{\max},
-\big\|V^\pi_{\mathcal{M}}-V^\pi_{\widehat{\mathcal{M}}}\big\|_\infty \le \frac{\gamma R_{\max}\varepsilon_P}{(1-\gamma)^2}, \qquad J(\hat\pi^\star)\ \ge\ J^\star-\frac{2\gamma R_{\max}\varepsilon_P}{(1-\gamma)^2}.
-One factor (1-\gamma)^{-1} comes from the resolvent (I-\gamma P^\pi)^{-1} and one from \|V\|_\infty\le R_{\max}/(1-\gamma). The error is measured over one step and paid over a horizon, which is why the effective horizon enters squared. At \gamma=0.98 that factor is 2500. The bound describes the shape of the problem and is far too loose to quote as a number, and its supremum runs over states no data reached, so a model with a small average error and one bad region satisfies no useful version of it.
-Three ways to spend a model. The model’s error ends up in the plan (planning, MPC), in the training data of a model-free learner (Dyna, MBPO), or in a gradient (PILCO). Choosing a column is choosing which of the three you are able to monitor.
-Anchor numbers
-On the 961-cell swing-up with the Week 6 overspeed trip switched back on at -3000, five torques, \gamma=0.98, \varepsilon=0.10 behaviour and five seeds, the exact optimum is J^\star=-124.0. The identified model is worth -151 after \mathbf{560} transitions, where Q-learning needs 1.5\times10^{5} to pass -191 and is still at -131 after 10^{6}, so the first usable plan arrives roughly 500\times earlier. The identified curve then settles at -149.4 and never moves again, and Q-learning passes it at 5.4\times10^{5} transitions. That crossing is failure mode 5 with an x-coordinate. The tabular count model is worse than useless until 10^{5} and then converges. Structure and a fitted correction together give both ends, -150 at 560 transitions and -124.2 at 10^{6}, which is J^\star to one part in 600. The published version of the same shape is MBPO reaching SAC’s asymptote with roughly an order of magnitude fewer environment steps, and ensemble MPC learning half-cheetah in around 10^{5} steps where model-free methods used millions.
-Connection to classical control
-Identify the plant, then design for the identified plant. Adaptive control has run this loop since the 1970s, and doing it without accounting for the uncertainty in the estimate is what Certainty equivalence names. The course has already made the move twice without materialising a model. Week 2 held the gain fixed under zero-mean disturbance, which is a statement about noise and says nothing about an uncertain model. Week 5 showed that batch TD(0) returns the value function of the maximum-likelihood empirical MDP, so the batch answer is the one a fitted model would give. The information overlaps and the object does not exist until you build it, and a Q table cannot be asked what follows an action.
-Key limitation
-Where the model class captures the plant, a model buys a working policy at a fraction of the interaction cost. Where it does not, model error sets a floor that data does not move, and the planner is drawn to exactly the regions where the model is optimistic. The guarantee that survives is Certainty equivalence plus a bound whose supremum is taken over states the data never reached, which is no guarantee on a robot. The loop is also closed in a way Week 12 takes up, since the controller that is running collects the next batch, so the model improves where the robot goes and nowhere else.
-Related concepts
-System identification | Model bias | Dyna | PILCO | MBPO | MPC | Certainty equivalence | Terminal cost approximation | Unifying diagram | Composition with classical control | Curse of dimensionality | Sample complexity | Residual RL | Distribution shift | iLQR | Value iteration
-References
-
-Primary: Sutton &amp; Barto (2018), Ch. 8.1–8.4
-Certainty-equivalence bound: the simulation lemma, as in Kearns &amp; Singh (2002)
-Measured shape: Janner et al. (2019); Chua et al. (2018)
-
-Appears in
-
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week06; Week07 §4.5
+Exercises: Week07 Q7.7
+Practical: Week07
 
 
 ---
@@ -2467,10 +2295,10 @@ Secondary: Bertsekas (2019), Ch. 5
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05, Week09
+Lecture notes: Week05 §3.1, §3.2, §3.4; Week09 §3.5, §3.7
+Exercises: Week05 Q5.3
+Practical: Week05
 
 
 ---
@@ -2507,10 +2335,10 @@ Coverage in the logged setting: Levine et al. (2020)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06, Week07, Week09
+Lecture notes: Week06 §3.1, §3.4; Week07 §3.1, §3.3 (off-policy data as the ingredient that breaks the alignment); Week09 §4.2 (on-policy by construction, from the visitation measure)
+Exercises: Week06 Q6.1, Q6.2; Week07 Q7.1, Q7.6
+Practical: Week06; Week07
 
 
 ---
@@ -2537,10 +2365,10 @@ Related concepts
 Experience replay | Off-policy learning | Coverage | Distribution shift | Deadly triad | DQN | Conservative Q-learning (CQL) | Failure modes of approximate RL | Q-learning
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §4.9
+Exercises: none
+Practical: none
 
 
 ---
@@ -2574,51 +2402,10 @@ Primary: Bertsekas (2019), Ch. 1 §1.1–1.2
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
-
-
----
-
-# PILCO
-URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/pilco
-
-PILCO
-Spend the model as a gradient: fit a Gaussian process to the dynamics, propagate a Gaussian state distribution through it by moment matching, and differentiate the expected cost with respect to the policy parameters analytically.
-Where it sits
-
-Unifying diagram cell: a policy × a learned model, the middle column’s policy row
-Bellman object approximated: none. The objective is differentiated directly, as in Policy gradient (REINFORCE), with the model supplying the expectation the plant would otherwise have to sample
-Failure mode addressed: sample efficiency, and failure mode 5 in part, since averaging over the posterior charges the policy improvement for regions the data have not pinned down
-Course first appearance: Week 11, as a sketch and a landmark
-
-Core idea
-Once a model exists, the policy can be improved without touching the plant. PILCO takes that to its limit by making the whole rollout differentiable and by carrying the model’s own uncertainty through it, so a policy that would only work if the model happened to be right is penalised during the improvement step rather than after deployment.
-Formal definition
-Fit a Gaussian process posterior over the dynamics from the data collected so far. Starting from a Gaussian p(x_0), propagate the state distribution H steps by moment matching, approximating each one-step predictive distribution by the Gaussian with the same mean and covariance, which keeps the propagated law Gaussian by construction. Then evaluate and differentiate
-J(\theta) = \sum_{i=0}^{H-1}\mathbb{E}_{x_i\sim p_\theta(x_i)}\big[\ell(x_i)\big], \qquad \nabla_\theta J \ \text{computed analytically through the chain of moments},
-and take a gradient step on \theta. The expectation is taken over the model posterior as well as over the state, which is where the caution comes from.
-Anchor numbers
-Cart-pole swing-up from scratch in about 20 seconds of interaction, at a time when model-free methods needed hours. The mechanism behind that figure is the posterior average, which makes the policy improvement cautious about regions the data have not pinned down. Ensembles of networks are the current cheap version of the same idea.
-Connection to classical control
-This is a stochastic optimal control problem solved on the identified plant, with the twist that the uncertainty being propagated is uncertainty about the model rather than about a disturbance. Week 2 settled the disturbance case, where zero-mean noise leaves the LQR gain unchanged, and Certainty equivalence is the name for ignoring the model uncertainty as well. PILCO refuses that second step, which puts it on the same side of the line as robust and stochastic MPC, and it pays the same currency, conservatism.
-Key limitation
-Moment matching assumes the propagated distribution stays Gaussian, which contact breaks. The Gaussian process cost grows with the size of the data set, so the method is at its best exactly where data are scarce. Both limits are structural rather than implementation defects, which is why the course keeps the idea and drops the algorithm. What survived is the claim that a model should report its own uncertainty and that a planner should be charged for using regions where that uncertainty is large.
-Related concepts
-Model-based RL | Model bias | MBPO | Dyna | MPC | Policy gradient (REINFORCE) | Policy parameterisation | Certainty equivalence | Sample complexity | Unifying diagram | System identification
-References
-
-Original: Deisenroth &amp; Rasmussen (2011), Sections 2 and 3
-Ensemble successor: Chua et al. (2018)
-
-Appears in
-
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week02
+Lecture notes: Week01 §2.2; Week02
+Exercises: Week01 Q1.1, Q2.2; Week02 Q1.2
+Practical: none
 
 
 ---
@@ -2649,10 +2436,10 @@ Related concepts
 Markov property | MDP | Bayes-adaptive MDP | Value function | Principle of optimality | Failure modes of approximate RL
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week03, Week04
+Lecture notes: Week01 §2.5 (Markov warning box); Week03 §2.4, §2.5; Week04 §5.4
+Exercises: none
+Practical: none
 
 
 ---
@@ -2690,10 +2477,10 @@ Reproducibility: Henderson et al. (2018)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §5.2, §6, §7
+Exercises: Week10 Q10.2
+Practical: Week10, Project Milestone 1
 
 
 ---
@@ -2732,10 +2519,10 @@ On step-size ranges and uninformative comparisons: Henderson et al. (2018)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06; Week09
+Lecture notes: Week06 §4, §5.1; Week09 §2, §3.7, §4
+Exercises: Week06 Q6.3, Q6.5, Q6.7; Week09 Q9.1, Q9.3, Q9.6
+Practical: Week06; Week09
 
 
 ---
@@ -2774,10 +2561,10 @@ Operator-first treatment: Bertsekas (2019), Reinforcement Learning and Optimal C
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week09
+Lecture notes: Week09 §2.1, §2.2, §2.3, §2.4
+Exercises: Week09 Q9.4, Q9.5
+Practical: Week09
 
 
 ---
@@ -2813,10 +2600,10 @@ Approximate version: Kakade &amp; Langford (2002); Schulman et al. (2015), TRPO
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week03, Week06
+Lecture notes: Week03 §5.3; Week06 §1.3 (restated in full, then its hypothesis removed)
+Exercises: none
+Practical: Week06
 
 
 ---
@@ -2855,10 +2642,10 @@ Secondary: Sutton &amp; Barto (2nd ed.), Ch. 4
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week03
+Lecture notes: Week03 §5
+Exercises: Week03 Q3.5, Q3.6
+Practical: Week03
 
 
 ---
@@ -2897,10 +2684,10 @@ On squashed Gaussian policies and the entropy coupling: Haarnoja et al. (2018)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06; Week09
+Lecture notes: Week06 §4.3, §4.5; Week09 §2.5, §5.2
+Exercises: Week06 Q6.5; Week09 Q9.5, Q9.8
+Practical: Week06; Week09
 
 
 ---
@@ -2935,10 +2722,10 @@ Original: Bellman (1957), Dynamic Programming
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01
+Lecture notes: Week01 §2.3
+Exercises: Week01 Q1.2, Q2.2
+Practical: none
 
 
 ---
@@ -2976,10 +2763,10 @@ Operator-first treatment: Bertsekas (2019), Ch. 6
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §2.5, §2.6
+Exercises: Week07 Q7.4, Q7.5
+Practical: none
 
 
 ---
@@ -3021,10 +2808,10 @@ Convergence: Tsitsiklis (1994), Asynchronous stochastic approximation and Q-lear
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06, Week11
+Lecture notes: Week06 §3
+Exercises: Week06 Q6.1, Q6.2, Q6.6
+Practical: Week06
 
 
 ---
@@ -3062,10 +2849,10 @@ Meyn (2022), Control Systems and Reinforcement Learning
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01
+Lecture notes: Week01 §1
+Exercises: none
+Practical: none
 
 
 ---
@@ -3103,10 +2890,10 @@ Original paper: Lai &amp; Robbins (1985), Asymptotically efficient adaptive allo
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §2.2, §3.6
+Exercises: Week04 Q4.3, Q4.5
+Practical: Week04
 
 
 ---
@@ -3135,10 +2922,10 @@ Related concepts
 Policy parameterisation | Composition with classical control | Policy gradient (REINFORCE) | Model bias | Sim-to-real gap | Imitation learning | Safe RL | Offline RL | MPC
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02, Week09
+Lecture notes: Week02 §4.5; Week09 §5.2
+Exercises: Week09 Q9.8
+Practical: none
 
 
 ---
@@ -3176,10 +2963,10 @@ On the dynamic-programming meaning: Bertsekas (2019), Ch. 2 (rollout and one-ste
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06; Week09
+Lecture notes: Week06 §4.1, §4.2; Week09 §2.4, §3.2
+Exercises: Week06 Q6.5; Week09 Q9.6
+Practical: Week06; Week09
 
 
 ---
@@ -3217,10 +3004,10 @@ Maximum-entropy formulation: Ziebart et al. (2008) for the earlier statement of 
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §5.3
+Exercises: none
+Practical: Week10, Project Milestone 1
 
 
 ---
@@ -3261,10 +3048,10 @@ Convergence: Singh, Jaakkola, Littman &amp; Szepesvári (2000)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06
+Lecture notes: Week06 §2
+Exercises: Week06 Q6.1, Q6.2, Q6.4, Q6.6
+Practical: Week06
 
 
 ---
@@ -3307,10 +3094,10 @@ Secondary: Lattimore &amp; Szepesvári, Bandit Algorithms (2020), for the confid
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §4
+Exercises: Week04 Q4.3, Q4.7
+Practical: Week04
 
 
 ---
@@ -3349,10 +3136,10 @@ Secondary: Recht (2019), A Tour of Reinforcement Learning: The View from Continu
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04, Week05, Week06, Week11
+Lecture notes: Week04 §2.3; Week05 §4.3 (the second anchor number); Week06 §5.1 (the third: the two branches priced against each other)
+Exercises: Week04 Q4.5, Q4.6; Week06 Q6.7
+Practical: Week04, Week06
 
 
 ---
@@ -3391,10 +3178,10 @@ Estimator background: it is well established in simulation optimisation as the l
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06; Week09
+Lecture notes: Week06 §4.2, §4.3; Week09 §2.5, §3.3, §3.4
+Exercises: Week06 Q6.5; Week09 Q9.4, Q9.5
+Practical: Week06; Week09
 
 
 ---
@@ -3431,10 +3218,10 @@ Residual gradient: Baird (1995)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §2.2
+Exercises: Week07 Q7.4, Q7.5, Q7.6
+Practical: Week07
 
 
 ---
@@ -3472,10 +3259,10 @@ Original paper: Williams (1992), Simple statistical gradient-following algorithm
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week06; Week09
+Lecture notes: Week06 §4.3; Week09 §2.5
+Exercises: Week06 Q6.5; Week09 Q9.5
+Practical: Week06; Week09
 
 
 ---
@@ -3509,10 +3296,10 @@ Sutton &amp; Barto (2018), Section 9.2, the on-policy distribution
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §2.4
+Exercises: Week07 Q7.4
+Practical: none
 
 
 ---
@@ -3554,57 +3341,10 @@ Convergence for TD: Tsitsiklis (1994); Jaakkola, Jordan &amp; Singh (1994)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
-
-
----
-
-# System identification
-URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/system-identification
-
-System identification
-Fit the free parameters of a dynamics model whose structure is already known from the mechanism, which turns model learning into a least-squares problem and makes the fit inspectable parameter by parameter.
-Where it sits
-
-Unifying diagram cell: the middle column, at its left-hand end, where the most structure is assumed and the least data is required
-Bellman object approximated: none. Identification produces the kernel that a planner then applies \mathcal{T} to, which is Model-based RL
-Failure mode addressed: sample efficiency, by converting a few hundred transitions into a usable plan. Class error is the part of failure mode 5 it cannot reach, and its excitation requirement is failure mode 4 wearing a different name
-Course first appearance: Week 11, with the estimation and control split planted in Weeks 2 and 5
-
-Core idea
-The equation of motion is known from the mechanism, and what is unknown is a short list of physical constants. Written in the right coordinates the equation is linear in those constants, so the fit is a linear solve with the usual conditions on the data. The audience has met every ingredient in a system identification course, and the only new part is what happens downstream when a planner is allowed to optimise inside the identified model.
-Formal definition
-For the torque-limited pendulum the equation of motion is linear in the parameters,
-\underbrace{m\ell^2}_{\theta_1}\ddot\varphi + \underbrace{b}_{\theta_2}\dot\varphi + \underbrace{mg\ell}_{\theta_3}\sin\varphi = u,
-which regroups into the regression y_t = \phi_t^\top\theta with y_t = u_t and \phi_t = [\,\ddot\varphi_t \;\; \dot\varphi_t \;\; \sin\varphi_t\,]^\top, solved by
-\hat\theta = (\Phi^\top\Phi)^{-1}\Phi^\top y .
-\Phi^\top\Phi is invertible only if the data excite every parameter, which is persistency of excitation. A pendulum held at rest identifies nothing and a swing-up excites all three. Exciting the plant on purpose is the Exploration-exploitation tradeoff of Week 4 arriving from the identification side.
-Structure plus a fitted correction. The class extends by keeping the identified physics and learning what is left over,
-\hat f(x,u) = \underbrace{f_{\text{rb}}(x,u;\hat\theta)}_{\text{rigid body, identified}} + \underbrace{g_\psi(x,u)}_{\text{learned correction}} .
-The hard part of the map is already supplied, so what remains is contact, friction, backlash, actuator lag and hydrodynamics, small in magnitude and smooth over the region a robot visits. A network with very few parameters covers it, and the data required scale with the residual instead of with the plant.
-Anchor numbers
-On the 961-cell swing-up the identified class carries one free scale \rho=\hat m/m on the torque gain and no actuator disturbance. Least squares on the one-step prediction settles it at \hat\rho\in[0.95,1.15] across five seeds within a few hundred transitions, so the identification itself succeeds. The plan it supports is worth -151 at \mathbf{560} transitions against J^\star=-124.0, roughly 500\times earlier than Q-learning’s first comparable plan, and it then settles at -149.4 and never moves again at any budget. The optimism gap between what the model predicts and what its plan is worth holds at \mathbf{28.5} from 10^{3} transitions to 10^{6}. The same counts used as a correction to the identified kernel instead of as a model on their own give -150 at 560 transitions and -124.2 at 10^{6}, with the gap closing from 84 at 300 transitions to 8.2 at 2.4\times10^{4} and 0.2 at 10^{6}. A class that can express what it is missing converts data into honesty about itself.
-Connection to classical control
-This is the classical identification problem, unchanged, and the conditions are the ones the audience already knows. Persistency of excitation is the rank condition on the regressor, least squares is the estimator, and the residual of the regression is the diagnostic. The composition with a learned correction is the paradigm modern robotics deploys. ANYmal’s locomotion policies were trained in a simulator whose rigid-body model was paired with an actuator network fitted to measured torque data, because the series-elastic actuators were the part no analytical model got right, and training then took hours on one machine with policies that transferred.
-Key limitation
-A successful fit is not a sufficient model. On the swing-up chain the omitted disturbance is zero-mean in torque, so it enlarges the regression residual without biasing \hat\theta, and nothing in the fit diagnostics reports the omission. What the class cannot express, no quantity of data recovers, which is the class-error half of Model bias and the reason the identified curve plateaus. The learned correction g_\psi is fitted where the data are, and outside that region it returns whatever its class extrapolates to while the planner is free to go looking there.
-Related concepts
-Model-based RL | Model bias | Certainty equivalence | MPC | Composition with classical control | Residual RL | Exploration-exploitation tradeoff | Torque-limited pendulum | LQR | Function approximation in RL | Distribution shift | Sim-to-real gap
-References
-
-Primary: Sutton &amp; Barto (2018), Ch. 8.1–8.2 for the model, and any standard identification text for the estimator
-Actuator network and the deployed stack: Hwangbo et al. (2019)
-Residual formulation in manipulation: Johannink et al. (2019)
-
-Appears in
-
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05
+Lecture notes: Week05 §2.1, §2.2, §2.5
+Exercises: Week05 Q5.4
+Practical: Week05
 
 
 ---
@@ -3652,10 +3392,10 @@ Convergence: Tsitsiklis (1994); Jaakkola, Jordan &amp; Singh (1994)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week05
+Lecture notes: Week05 §2.3, §2.4, §2.5
+Exercises: Week05 Q5.1, Q5.2, Q5.6
+Practical: Week05
 
 
 ---
@@ -3689,10 +3429,10 @@ Primary: Sutton &amp; Barto (2018), Section 16.5
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week07
+Lecture notes: Week07 §4.4
+Exercises: Week07 Q7.3, Q7.7
+Practical: Week07
 
 
 ---
@@ -3728,10 +3468,10 @@ Secondary: Rawlings, Mayne &amp; Diehl, Ch. 2 — terminal ingredients and their
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02, Week11
+Lecture notes: Week02 §4.5, §5.2
+Exercises: Week02 Q2.2(c), Q3.2, Challenge
+Practical: Week02
 
 
 ---
@@ -3767,10 +3507,10 @@ Secondary: Russo et al. (2018), A Tutorial on Thompson Sampling
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §3.5
+Exercises: Week04 Q4.2, Q4.6
+Practical: Week04
 
 
 ---
@@ -3838,10 +3578,10 @@ Course figures: 09_Code/Week02/pendulum_swingup_failure.m, pendulum_lqr_roa.m
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02
+Lecture notes: Week02 §3
+Exercises: Week02 Q1.1, Q1.3, Q3.1
+Practical: Week02
 
 
 ---
@@ -3875,10 +3615,10 @@ Primary: Betts, Practical Methods for Optimal Control and Estimation Using Nonli
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02
+Lecture notes: Week02 §4.6
+Exercises: Week02 Q1.2
+Practical: none
 
 
 ---
@@ -3916,10 +3656,10 @@ Constrained extension: Achiam, Held, Tamar &amp; Abbeel (2017)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §5.2
+Exercises: none
+Practical: Week10
 
 
 ---
@@ -3959,10 +3699,10 @@ Applied to actor-critic: Konda &amp; Tsitsiklis (2003)
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week10
+Lecture notes: Week10 §4.2
+Exercises: Week10 Q10.7
+Practical: Week10
 
 
 ---
@@ -3999,10 +3739,10 @@ Original paper: Auer, Cesa-Bianchi &amp; Fischer (2002), Finite-time analysis of
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week04
+Lecture notes: Week04 §3.3, §3.4
+Exercises: Week04 Q4.2, Q4.4, Q4.5, Q4.6
+Practical: Week04
 
 
 ---
@@ -4039,10 +3779,10 @@ Course statement: 00_Meta/teaching_companion.md §3.1 (canonical), CLAUDE.md §7
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week02
+Lecture notes: Week02 §3.1
+Exercises: Week02 Q1.3
+Practical: none
 
 
 ---
@@ -4164,7 +3904,7 @@ Reading the rows: which Bellman object is approximated?
 
 
 
-RepresentsMethodWhat is done with \mathcal{T}value functionDP, value iteration\mathcal{T} applied exactly, at every statevalue functionpolicy iterationexact solve of the \mathcal{T}^\pi fixed point, then one exact \mathcal{T}value functionbandit algorithmsnone — no successor state, so nothing to bootstrap fromvalue functionTD learning, TD(\lambda)\mathcal{T}^\pi on sampled transitions: no \max, because the policy is fixedvalue functionQ-learning, DQN\mathcal{T} applied on sampled transitions, approximately; under approximation, composed with a fit onto what the parameters can representvalue functionLSTD, LSPI\mathcal{T}^\pi, solved exactly inside the representable subspace (Projected Bellman equation)value functionSARSA\mathcal{T}_\varepsilon on sampled transitions at fixed \varepsilon, and \mathcal{T} only in the GLIE limitpolicyREINFORCE (+ baseline)none — the objective is differentiated directly, and the baseline is fitted to observed returnsbothactor-critic, PPO, SAC\mathcal{T}^\pi for the critic, gradient for the actorbothDDPG, TD3\mathcal{T}^\pi nominally, with a \max hidden in a deterministic actor trained to ascend Q_wbothMPC\mathcal{T} over a truncated horizon, terminal value approximated
+RepresentsMethodWhat is done with \mathcal{T}value functionDP, [[Value iterationvalue iteration]]value function[[Policy iterationpolicy iteration]]value functionbandit algorithmsnone — no successor state, so nothing to bootstrap fromvalue functionTD learning, TD(\lambda)\mathcal{T}^\pi on sampled transitions: no \max, because the policy is fixedvalue functionQ-learning, DQN\mathcal{T} applied on sampled transitions, approximately; under approximation, composed with a fit onto what the parameters can representvalue functionLSTD, LSPI\mathcal{T}^\pi, solved exactly inside the representable subspace (Projected Bellman equation)value functionSARSA\mathcal{T}_\varepsilon on sampled transitions at fixed \varepsilon, and \mathcal{T} only in the GLIE limitpolicyREINFORCE (+ baseline)none — the objective is differentiated directly, and the baseline is fitted to observed returnsbothactor-critic, PPO, SAC\mathcal{T}^\pi for the critic, gradient for the actorbothDDPG, TD3\mathcal{T}^\pi nominally, with a \max hidden in a deterministic actor trained to ascend Q_wbothMPC\mathcal{T} over a truncated horizon, terminal value approximated
 The critic row is \mathcal{T}^\pi, not \mathcal{T}: a critic evaluates the policy the actor currently has, so its fixed-point equation carries no \max. (SAC’s entropy term acts as a softened maximisation, which is the one footnote the row rule needs and which changes no placement, since the rule turns on Bootstrapping.)
 The “none” in the policy row is a different attack on the same problem, not a weaker version of the value-based one. Policy-gradient methods never form a Bellman residual: they parametrise the policy and differentiate the expected return.
 SARSA’s entry is the one students misread, since the algorithm is on-policy and its own exploration therefore enters the target it learns. At a fixed exploration rate it solves the Exploration-aware Bellman operator exactly, which is a legitimate question with a legitimate answer, and the distance between the two fixed points is measurable: 11.4\% at \varepsilon = 0.10 on the Week 6 swing-up when executed with exploration in place, and 0.8\% in the opposite direction when both are executed greedily.
@@ -4198,7 +3938,7 @@ What breaks when we leave the top-left cell
 
 
 
-We loseWhat replaces it, and whereExhaustive Bellman updatesSampling: only visited states get updated (Wk 5)Known f and computable \mathbb{E}_wSampled transitions; TD learning as stochastic approximation (Wk 5)Freedom to evaluate any stateExploration becomes a cost, and on hardware a safety question (Wk 4)Tabular representationFunction approximation — \mathcal{T} no longer applied exactly (Wk 7)A fixed data distributionThe data depends on the policy that generated it (Wk 9, 12)
+We loseWhat replaces it, and whereExhaustive Bellman updatesSampling: only visited states get updated (Wk 5)Known f and computable \mathbb{E}_wSampled transitions; TD learning as [[Stochastic approximationFreedom to evaluate any stateExploration becomes a cost, and on hardware a safety question (Wk 4)Tabular representationFunction approximation — \mathcal{T} no longer applied exactly (Wk 7)A fixed data distributionThe data depends on the policy that generated it (Wk 9, 12)
 Key limitation
 The grid classifies what a method represents, which is not the same as how well it works, how many samples it needs, or whether it is safe on hardware. It is an orientation device, not a selection criterion.
 Related concepts
@@ -4209,10 +3949,10 @@ Course-specific synthesis; closest published framing: Meyn (2022), Ch. 1; Recht 
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week02, Week03, Week04, Week05, Week06, Week07, Week09, Week10, Week11 (middle column opened)
+Lecture notes: Week01 §5; Week02 §5.1 (left column completed: iLQR, MPC); Week03 §6.4 (top-left cell completed; the only cell where “exactly” applies); Week04 §5.5 (top-right cell entered; the cell with no Bellman object); Week05 (the first Bellman object in that cell, \mathcal{T}^\pi on samples); Week06 §5.2 (the second row opens; three different answers to the Bellman-object question in one session); Week07 §5.1 (same cell, table removed: LSTD, LSPI and DQN); Week09 §6.1 (the policy row gets a theorem, and a value estimate that does not move the method out of it); Week10 §7 (the bottom row filled, by the same test that kept Week 9 out of it)
+Exercises: none
+Practical: none
 
 
 ---
@@ -4249,10 +3989,10 @@ Secondary: Sutton &amp; Barto (2nd ed.), Ch. 3
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week03
+Lecture notes: Week01 §3; Week03 §3.1, §3.3
+Exercises: Week01 Q1.3, Q3.1; Week03 Q3.2
+Practical: none
 
 
 ---
@@ -4291,10 +4031,10 @@ Secondary: Sutton &amp; Barto (2nd ed.), Ch. 4
 
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
+Slides: Week01, Week02, Week03, Week11
+Lecture notes: Week01 §3.5–3.6; Week02; Week03 §4
+Exercises: Week01 Q3.1, Q3.2; Week02 Q2.2; Week03 Q3.6, Q3.7
+Practical: Week01; Week03
 
 
 ---
@@ -4321,34 +4061,10 @@ Related concepts
 Trajectory optimisation | MPC | LQR | Unifying diagram | Model-based RL | Closure under the Bellman operator
 Appears in
 
-Slides: 
-Lecture notes: 
-Exercises: 
-Practical: 
-
-
----
-
-# Weekly study guides
-URL: https://AndreuCecilia.github.io/rl-robotics/course/index
-
-Weekly study guides
-Slides, lecture notes, and exercises are distributed on the official
-university course page, released before each session so you can pre-read.
-The pages here are per-week study guides: what the week is about, which
-concepts it introduces (linked into the concept knowledge base), how
-to prepare, and any errata for the released materials.
-
-
-                  
-                  Navigation 
-                  
-                
-
-Published weeks appear under Course in the left explorer (and below). Each
-week page links the concepts introduced that week.
-
-
+Slides: Week02
+Lecture notes: Week02 §4.6
+Exercises: none
+Practical: none
 
 
 ---
@@ -4573,8 +4289,7 @@ Tedrake, Underactuated Robotics (free online): pendulum and MPC material
 Original papers per method (DQN, PPO, SAC, CQL, CPO, DAgger): read the originals for methods you use in the project
 
 Weekly reading assignments appear with the materials on the official university
-course page; each week’s study guide here covers what to read
-first and how to prepare.
+course page.
 
 ---
 
@@ -4584,9 +4299,8 @@ URL: https://AndreuCecilia.github.io/rl-robotics/index
 Reinforcement Learning in Robotics
 240MAR45 · MSc in Automatic Control and Robotics · UPC Barcelona
 This is the student companion site for the course: an interlinked knowledge base
-of the core concepts, plus a study guide for each week. The materials themselves
-(slides, lecture notes, exercises, code) are distributed on the official
-university course page, not here.
+of the core concepts. The materials themselves (slides, lecture notes, exercises,
+code) are distributed on the official university course page, not here.
 
 
                   
@@ -4649,11 +4363,9 @@ bootstrapping, not “has a value function”.
 The columns are the ends of a spectrum, not a binary: robotics usually sits in
 between, with a model partly known and partly learned.
 Method names become links as their concept notes are published over the semester.
-Weekly materials
+Course materials
 Slides, lecture notes, exercises, and code are distributed on the official
 university course page, released before each session.
-Weekly study guides here tell you what each week is about,
-which concepts it introduces, and how to prepare.
 Course information
 Syllabus and course guide: schedule, assessment, the
 cumulative project, software stack, and reading list.
@@ -4702,6 +4414,13 @@ among several, not a replacement for classical control.
 
 # 04_Concepts
 URL: https://AndreuCecilia.github.io/rl-robotics/04_concepts/index
+
+
+
+---
+
+# Course
+URL: https://AndreuCecilia.github.io/rl-robotics/course/index
 
 
 
