@@ -378,7 +378,7 @@ Appears in
 
 Slides: Week03
 Lecture notes: Week03 §4.3
-Exercises: Week03 Q3.1, Q3.4, Q3.6
+Exercises: Week03 Q3.1, Q3.4
 Practical: Week03
 
 
@@ -488,7 +488,7 @@ Course first appearance: Week 10, named on the trust-region frame and not develo
 Planted framing (Week 10)
 The trust-region update bounds the change in one accumulated quantity, the policy itself, measured in KL divergence over the visited states. A method that can do that can bound the change in a second accumulated quantity by the same argument, and CPO is that observation applied to a cost signal J_C that accumulates exactly as J accumulates reward. What the construction is after is a guarantee at every iterate rather than in the limit, which is the property a robot needs and which no convergence theorem in the course has supplied so far. Week 13 develops the constrained MDP behind it and sets it against the Lyapunov-based alternative.
 Related concepts
-Trust region | PPO | CMDP | Safe RL | Safe exploration | Actor-critic | Design-space diagram | Control barrier function (CBF) | Reward engineering
+Trust region | PPO | Safe exploration | Actor-critic | Design-space diagram
 Appears in
 
 Slides: Week10
@@ -526,7 +526,7 @@ This is classical stochastic control, the LQG separation result. Its value in th
 Key limitation
 It is a statement about disturbances, not about model uncertainty; about linear-quadratic problems, not general ones; and about zero-mean noise, not heavy tails or state-dependent noise. It also says nothing about risk: it optimises an expectation, so the same controller is returned whatever the variance of the outcome.
 Related concepts
-LQR | Exploration-exploitation tradeoff | Dual control | Bayes-adaptive MDP | MPC | Model bias | Discount factor | RL as approximate dynamic programming | TD learning | Monte Carlo policy evaluation | Markov property
+LQR | Exploration-exploitation tradeoff | Dual control | Bayes-adaptive MDP | MPC | Discount factor | RL as approximate dynamic programming | TD learning | Monte Carlo policy evaluation | Markov property
 References
 
 Primary: Bertsekas (2019), Ch. 4 — linear-quadratic problems and certainty equivalence
@@ -535,8 +535,8 @@ Secondary: Anderson &amp; Moore, Optimal Control: Linear Quadratic Methods (LQG 
 Appears in
 
 Slides: Week02, Week04, Week05, Week11
-Lecture notes: Week02 §2.6; Week04 §1.5, §1.6 (the boundary, with the dual effect priced); Week05 §3.4 (batch TD as certainty equivalence on a chain)
-Exercises: Week02 Q2.1; Week04 Q4.1, Q4.8
+Lecture notes: Week02 §2.6; Week04 §1.5, §1.6 (the boundary, with the dual effect priced); Week05 §3.4 (batch TD as certainty equivalence on a chain); Week11 §1.3, §2.1 (the fitted model made explicit, and no separation theorem available)
+Exercises: Week02 Q2.1; Week04 Q4.1, Q4.8; Week11 Q11.5
 Practical: none
 
 
@@ -614,7 +614,7 @@ The composition arguments are control arguments: a residual model is only useful
 Key limitation
 Composition is not free. Each interface is a place where assumptions can be violated silently: a learned model queried outside its training distribution, or a safety filter whose certificate assumed dynamics that the learned component has changed. The course is honest about this rather than presenting hybrid stacks as a solved recipe.
 Related concepts
-RL as approximate dynamic programming | Unifying diagram | Policy parameterisation | LQR policy gradient | MPC | Model-based RL | Residual RL | Sim-to-real gap | Safe RL | Energy shaping | Model bias
+RL as approximate dynamic programming | Unifying diagram | Policy parameterisation | LQR policy gradient | MPC | Residual RL | Energy shaping
 References
 
 Primary: Meyn (2022), Ch. 1; Recht (2019)
@@ -623,7 +623,7 @@ Course companion: 00_Meta/teaching_companion.md §3
 Appears in
 
 Slides: Week01, Week02, Week03, Week09, Week11
-Lecture notes: Week01 §1.1, §5.1; Week02; Week03 §1; Week09 §5.2, §5.3
+Lecture notes: Week01 §1.1, §5.1; Week02; Week03 §1; Week09 §5.2, §5.3; Week11 §6.1 (identified physics, learned residual, one planner)
 Exercises: none
 Practical: none
 
@@ -803,8 +803,8 @@ Appears in
 
 Slides: Week01, Week03
 Lecture notes: Week01 §2.5; Week03 §6
-Exercises: Week01 Q3.2; Week03 Q3.3, Q3.7
-Practical: Week03
+Exercises: Week01 Q3.2; Week03 Q3.3
+Practical: Week01 (homework: grid resolution vs. the Riccati solution); Week03
 
 
 ---
@@ -1049,7 +1049,7 @@ Key limitation
 The mathematical and engineering roles pull against each other, and Week 3 makes the tension quantitative. A larger \gamma describes the far-sighted problem you meant to pose, while a smaller one converges faster and tightens every bound in Bellman residual, where the two conversion factors \gamma/(1-\gamma) and 2\gamma/(1-\gamma) multiply to about 2\times10^4 at \gamma = 0.99. Planning with \gamma_{\text{plan}} &lt; \gamma_{\text{eval}} solves a different problem than the one being scored, and with an imperfect model that trade can favour the shorter horizon, since planning error accumulates over the effective horizon. The Week 3 challenge problem measures exactly this.
 \gamma is a design parameter of the problem, not a hyperparameter to tune blindly. On a 200-step episode at 50 Hz (4 s), \gamma = 0.9 weights an end-of-episode reward by \gamma^{200} \approx 7\times10^{-10}: the task has been silently redefined into one where reaching the target is worthless. Choose \gamma from the timescale of the task first, and only then consider its effect on convergence speed.
 Related concepts
-Bellman equation | Bellman operator | Value iteration | Value function | MPC | Reward engineering
+Bellman equation | Bellman operator | Value iteration | Value function | MPC
 References
 
 Primary: Bertsekas (2019), Ch. 1; Meyn (2022), Ch. 1
@@ -1130,11 +1130,11 @@ Week 7 gives the mechanism a place inside the mathematics. The weighting of the 
 Revisited (Week 9)
 Week 9 shows the same mismatch from the policy branch. The Policy gradient theorem weights states by the Discounted state-visitation measure of the policy being differentiated, so the distribution the data carry is the distribution the theorem is written against, and it moves at every update. That is why the method is on-policy by construction and why every batch collected under an older policy has to be reweighted by Importance sampling or thrown away. Week 12 takes the case where no new batch can be collected at all.
 Related concepts
-Torque-limited pendulum | Offline RL | Failure modes of approximate RL | Sim-to-real gap | DQN | Policy gradient (REINFORCE) | Stationary distribution | Projected Bellman equation | Experience replay | Baird’s counterexample | Coverage
+Torque-limited pendulum | Offline RL | Failure modes of approximate RL | DQN | Policy gradient (REINFORCE) | Stationary distribution | Projected Bellman equation | Experience replay | Baird’s counterexample | Coverage
 Appears in
 
 Slides: Week02, Week07, Week09, Week11
-Lecture notes: Week02 §3.3, §3.5; Week07 §2.4, §3.2, §4.9; Week09 §4.2
+Lecture notes: Week02 §3.3, §3.5; Week07 §2.4, §3.2, §4.9; Week09 §4.2; Week11 §6.1 (the model improves where the robot goes and nowhere else)
 Exercises: Week07 Q7.2
 Practical: none
 
@@ -1162,7 +1162,7 @@ This is classical control. Feldbaum named the two effects in 1960 while studying
 Key limitation
 Naming the two effects does not tell us how to trade them. The exact solution is out of reach on any system with a robot’s dimension, so the concept operates in this course as a statement of what the practical rules approximate rather than as a method anyone runs.
 Related concepts
-Certainty equivalence | Exploration-exploitation tradeoff | Bayes-adaptive MDP | Composition with classical control | Bandit problem | Model-based RL
+Certainty equivalence | Exploration-exploitation tradeoff | Bayes-adaptive MDP | Composition with classical control | Bandit problem
 References
 
 Primary: Feldbaum (1960), Dual control theory I–IV
@@ -1456,8 +1456,8 @@ Secondary: Recht (2019), A Tour of Reinforcement Learning: The View from Continu
 Appears in
 
 Slides: Week04, Week11
-Lecture notes: Week04 §1
-Exercises: Week04 Q4.1
+Lecture notes: Week04 §1; Week11 §2.4 (the same problem as persistency of excitation)
+Exercises: Week04 Q4.1; Week11 Q11.5
 Practical: Week04
 
 
@@ -1552,7 +1552,7 @@ This is not a complete taxonomy. It privileges the failure modes that organise t
 What “addresses” means
 The verb is weak on purpose. Week 7 makes mode 1 survivable and removes no ingredient of the Deadly triad, recovers no theorem, and each of its mechanisms is dated to a specific instability somebody observed. Tagging a method with a failure mode means that much for the rest of the course, and no more.
 Related concepts
-Deadly triad | DQN | Function approximation in RL | Policy gradient (REINFORCE) | Baseline (variance reduction) | Policy gradient theorem | Bias-variance tradeoff in RL | Actor-critic | Distribution shift | Offline RL | Safe RL | Model bias | Model-based RL | Unifying diagram | Critic | GAE | SAC | Design-space diagram | Trust region
+Deadly triad | DQN | Function approximation in RL | Policy gradient (REINFORCE) | Baseline (variance reduction) | Policy gradient theorem | Bias-variance tradeoff in RL | Actor-critic | Distribution shift | Offline RL | Unifying diagram | Critic | GAE | SAC | Design-space diagram | Trust region
 References
 
 The list is a course-specific synthesis with no single reference
@@ -1563,8 +1563,8 @@ Distribution shift: Levine et al. (2020)
 Appears in
 
 Slides: Week07 onward, opening every theory session; Week09 (mode 2 highlighted), Week10 (modes 1 and 2 highlighted together), Week11 (mode 5 signed for)
-Lecture notes: Week07 §5.2; Week09 §1.2, §3.1 (mode 2 given its mechanism and its number); Week10 §1.1 (two modes marked at once, and the price named with them)
-Exercises: Week07 Q7.3
+Lecture notes: Week07 §5.2; Week09 §1.2, §3.1 (mode 2 given its mechanism and its number); Week10 §1.1 (two modes marked at once, and the price named with them); Week11 §1.2 (mode 5 added, the first card on the right and the only method that adds one)
+Exercises: Week07 Q7.3; Week11 Q11.1
 Practical: none
 
 
@@ -1722,7 +1722,7 @@ This is a fixed-structure controller with a dither on the input. Iterative feedb
 Key limitation
 The class is unimodal. If two well-separated actions are both good at a state and everything between them is bad, the mean can settle between the modes and command an action that is good at neither, which is exactly the situation a time-optimal bang-bang solution creates. A Softmax policy class over a torque grid represents both branches without difficulty, so the continuous class is not automatically the more expressive one. The support is also unbounded. Squashing the mean bounds what the policy aims at and not what it draws, so a broad policy still commands torques past u_{\max} and relies on the actuator to clip them. And exploration and estimation share one parameter, so a run in which \sigma collapses early has stopped exploring and has a badly conditioned estimator at the same time.
 Related concepts
-Policy parameterisation | Softmax policy class | Score function estimator | Likelihood-ratio identity | Policy gradient theorem | Policy gradient (REINFORCE) | LQR policy gradient | Torque-limited pendulum | Residual RL | Composition with classical control | Exploration-exploitation tradeoff | Safe RL | SAC
+Policy parameterisation | Softmax policy class | Score function estimator | Likelihood-ratio identity | Policy gradient theorem | Policy gradient (REINFORCE) | LQR policy gradient | Torque-limited pendulum | Residual RL | Composition with classical control | Exploration-exploitation tradeoff | SAC
 References
 
 Primary: Sutton &amp; Barto (2018), §13.7
@@ -1964,13 +1964,13 @@ Dynamic programming | Value iteration | Bellman equation | Bellman operator | HJ
 References
 
 Primary: Bertsekas (2019), Ch. 1 and Ch. 4; Anderson &amp; Moore, Optimal Control: Linear Quadratic Methods, Ch. 2–4
-Software: control.dare (python-control) for reference solutions
+Software: scipy.linalg.solve_discrete_are for reference solutions (the course pins no control library)
 
 Appears in
 
 Slides: Week01, Week02
 Lecture notes: Week01 §2.6, §4; Week02 §2
-Exercises: Week01 Q2.1, Q3.2; Week02 Q2.1, Q2.2, Q3.1
+Exercises: Week01 Q2.1, Q3.2; Week02 Q2.1, Q2.2
 Practical: Week01, Week02
 
 
@@ -2130,7 +2130,7 @@ Appears in
 
 Slides: Week03
 Lecture notes: Week03 §2
-Exercises: Week03 Q3.6
+Exercises: none
 Practical: Week03
 
 
@@ -2165,7 +2165,7 @@ Same plant, same u_{\max}, same stage cost, same solver, and only N differs. Wit
 Key limitation
 An optimisation runs inside the control loop against a hard deadline, and a missed period is not a slower controller, it is an open-loop controller for that period. Nonlinear f makes the problem nonconvex, so the solver returns a local minimum, and which local minimum can change between periods, producing a discontinuous effective policy for reasons that have nothing to do with J^\star. And re-planning does not repair a systematic model error, because every re-plan uses the same wrong model (see Model bias).
 Related concepts
-Bellman equation | Terminal cost approximation | Open-loop vs feedback | LQR | iLQR | Trajectory optimisation | Torque-limited pendulum | Model bias | Composition with classical control | Model-based RL
+Bellman equation | Terminal cost approximation | Open-loop vs feedback | LQR | iLQR | Trajectory optimisation | Torque-limited pendulum | Composition with classical control
 References
 
 Primary: Rawlings, Mayne &amp; Diehl, Model Predictive Control: Theory, Computation and Design, Ch. 2
@@ -2174,8 +2174,8 @@ Secondary: Bertsekas (2019), Ch. 2 — MPC as approximate dynamic programming wi
 Appears in
 
 Slides: Week02, Week03, Week11
-Lecture notes: Week02 §4; Week03 §1 (the three gaps, amortisation)
-Exercises: Week02 Q1.2, Q2.2(c), Q3.2
+Lecture notes: Week02 §4; Week03 §1 (the three gaps, amortisation); Week11 §3.3 (a learned \hat f, and what re-planning does not repair)
+Exercises: Week02 Q1.2, Q2.2(c)
 Practical: Week02
 
 
@@ -2252,7 +2252,7 @@ Primary: Sutton &amp; Barto (2018), Section 6.7
 Appears in
 
 Slides: Week07
-Lecture notes: Week06; Week07 §4.5
+Lecture notes: Week06; Week07 §4.5; Week11 §5.1 (the same argument one level up, over trajectories instead of actions)
 Exercises: Week07 Q7.7
 Practical: Week07
 
@@ -2326,7 +2326,7 @@ This is identification from data collected under a controller other than the one
 Key limitation
 Off-policy freedom removes a constraint on the policy and leaves the constraint on the data untouched. Under function approximation it also stops being free, because bootstrapping plus off-policy data plus a parametric approximator is exactly the combination that can diverge (Deadly triad, Week 7). Week 7 gets away with Experience replay because the distribution inside a buffer refreshed by the current policy does not shift very much; with a fixed log the buffer stops being refreshed and coverage becomes the binding constraint, which is Offline RL in Week 12.
 Related concepts
-Q-learning | SARSA | Importance sampling | Discounted state-visitation measure | Policy gradient theorem | Coverage | Experience replay | Deadly triad | Distribution shift | Offline RL | Bootstrapping | Epsilon-greedy | GLIE | Policy gradient (REINFORCE) | Imitation learning
+Q-learning | SARSA | Importance sampling | Discounted state-visitation measure | Policy gradient theorem | Coverage | Experience replay | Deadly triad | Distribution shift | Offline RL | Bootstrapping | Epsilon-greedy | GLIE | Policy gradient (REINFORCE)
 References
 
 Primary: Sutton &amp; Barto (2018), Ch. 5 (importance sampling) and Ch. 6
@@ -2362,7 +2362,7 @@ Course first appearance: Week 7, as the one sentence that says why Experience re
 Planted framing (Week 7)
 Experience replay is a moving window of experience. It breaks temporal correlations and reuses past transitions, and discarding the oldest transitions keeps the buffer tied, imperfectly, to the recent behaviour policy. Replay works because the distribution does not shift much. Freeze the buffer, or receive a fixed log of somebody else’s operation, and that recency argument disappears while the algorithm stays syntactically identical. The same week supplies the mechanism that makes this dangerous, since off-policy weighting is what breaks the alignment behind the Projected Bellman equation and the buffer only ever kept the mismatch small (Deadly triad).
 Related concepts
-Experience replay | Off-policy learning | Coverage | Distribution shift | Deadly triad | DQN | Conservative Q-learning (CQL) | Failure modes of approximate RL | Q-learning
+Experience replay | Off-policy learning | Coverage | Distribution shift | Deadly triad | DQN | Failure modes of approximate RL | Q-learning
 Appears in
 
 Slides: Week07
@@ -2603,7 +2603,7 @@ Appears in
 Slides: Week03, Week06
 Lecture notes: Week03 §5.3; Week06 §1.3 (restated in full, then its hypothesis removed)
 Exercises: none
-Practical: Week06
+Practical: Week03; Week06
 
 
 ---
@@ -2644,7 +2644,7 @@ Appears in
 
 Slides: Week03
 Lecture notes: Week03 §5
-Exercises: Week03 Q3.5, Q3.6
+Exercises: Week03 Q3.5
 Practical: Week03
 
 
@@ -2675,7 +2675,7 @@ This is controller structure selection, with the tuning done by measured gradien
 Key limitation
 The class both explores and estimates, through the same parameter, in opposite directions, and no separate exploration mechanism exists to decouple them. It also fixes what is representable before any data arrive, so a behaviour outside the class stays out of reach whatever the optimiser does. Each class fails in its own way, the softmax by needing one preference per action and stalling once its probabilities saturate, the Gaussian by being unimodal where the optimal command is bang-bang. Both cases are worked in Softmax policy class and Gaussian policy class.
 Related concepts
-Softmax policy class | Gaussian policy class | Policy gradient theorem | Policy gradient (REINFORCE) | Score function estimator | Likelihood-ratio identity | Function approximation in RL | Torque-limited pendulum | Residual RL | Composition with classical control | Safe RL | Exploration-exploitation tradeoff | Baseline (variance reduction) | SAC
+Softmax policy class | Gaussian policy class | Policy gradient theorem | Policy gradient (REINFORCE) | Score function estimator | Likelihood-ratio identity | Function approximation in RL | Torque-limited pendulum | Residual RL | Composition with classical control | Exploration-exploitation tradeoff | Baseline (variance reduction) | SAC
 References
 
 Primary: Sutton &amp; Barto (2018), §13.1 and §13.7
@@ -2809,8 +2809,8 @@ Convergence: Tsitsiklis (1994), Asynchronous stochastic approximation and Q-lear
 Appears in
 
 Slides: Week06, Week11
-Lecture notes: Week06 §3
-Exercises: Week06 Q6.1, Q6.2, Q6.6
+Lecture notes: Week06 §3; Week11 §3.2 (the same update on imagined data), §4.2 (the model-free baseline that passes the identified model at 5.4	imes10^{5} transitions)
+Exercises: Week06 Q6.1, Q6.2, Q6.6; Week11 Q11.1
 Practical: Week06
 
 
@@ -2919,7 +2919,7 @@ Week 2 plants the shape one level down, on the dynamics. The forward reference a
 Planted framing (Week 9)
 Week 9 reaches it from the policy class rather than from the safety argument. Choosing the parameterisation is a controller-design decision, and a class written as a trusted law plus a learned residual is one of the three kinds of structure the session shows a policy class carrying, alongside actuator saturation through a squashed mean and symmetry through shared parameters. A value function has no natural place to express any of the three, because they are statements about the map from state to command. The composition principle of the course appears here in its most literal form, and the notes point forward to Week 12 by name.
 Related concepts
-Policy parameterisation | Composition with classical control | Policy gradient (REINFORCE) | Model bias | Sim-to-real gap | Imitation learning | Safe RL | Offline RL | MPC
+Policy parameterisation | Composition with classical control | Policy gradient (REINFORCE) | Offline RL | MPC
 Appears in
 
 Slides: Week02, Week09
@@ -3086,7 +3086,7 @@ The admissibility condition is a state and input constraint of the kind MPC alre
 Key limitation
 Learning a constraint from experience always pays for the first pulls of an unknown arm, since an arm has no safety record before it has been tried and several pulls are needed to separate a dangerous arm from an unlucky one. That investigation window is irreducible for any algorithm of this kind, and removing it requires structure the bandit formulation threw away: a damage model from the physics, a shared parameterisation that transfers evidence between arms, or a certificate. The bandit case is also the easy one. An arm can always be abandoned after one pull, while a robot in the wrong region of its state space may have no admissible action that recovers it.
 Related concepts
-UCB | Epsilon-greedy | Regret | Exploration-exploitation tradeoff | Safe RL | CMDP | Control barrier function (CBF) | CPO | Sample complexity | MPC
+UCB | Epsilon-greedy | Regret | Exploration-exploitation tradeoff | CPO | Sample complexity | MPC
 References
 
 Primary: Achiam et al. (2017), Constrained Policy Optimization, for the constraint-against-penalty argument
@@ -3128,7 +3128,7 @@ Ten candidate controllers separated by \Delta = 0.05 on a normalised success met
 Week 5 adds the second entry. Evaluating one fixed swing-up controller on a 961-state discretisation of the Torque-limited pendulum, to an RMS error of 1.62 against an exact V^\pi, costs 79\,350 transitions, which is 2.2 hours of hardware time at 10 Hz. No improvement step appears anywhere in that figure. The two numbers sit on the same axis and should be read together: 33 hours to rank ten controllers you already have, 2.2 hours to learn what one of them is worth from every state.
 Week 6 adds the third entry, and it prices a branch of the diagram instead of a task. On the same 961-cell chain with the swing-up controller removed and five admissible torques, Q-learning reaches 97\% of J^\star after 7.5\times10^5 transitions, which is 21 hours at 10 Hz, and Policy gradient (REINFORCE) is still 8.7\% short after 6.5\times10^6. That factor of at least 8.6 is a lower bound, since the policy method never reaches the value method’s level inside its budget, and the inter-seed spread at the matched budget is 18.4 against 2.4. The experiment runs on ground chosen to favour tabular value learning and says nothing about continuous action spaces or structured policy classes.
 Related concepts
-Regret | Bandit problem | UCB | Exploration-exploitation tradeoff | Safe exploration | Model-based RL | Sim-to-real gap | Offline RL | Coverage | TD learning | Q-learning | Policy gradient (REINFORCE) | Bootstrapping | Bias-variance tradeoff in RL
+Regret | Bandit problem | UCB | Exploration-exploitation tradeoff | Safe exploration | Offline RL | Coverage | TD learning | Q-learning | Policy gradient (REINFORCE) | Bootstrapping | Bias-variance tradeoff in RL
 References
 
 Primary: Lattimore &amp; Szepesvári, Bandit Algorithms (2020), Ch. 4 and Ch. 16
@@ -3137,8 +3137,8 @@ Secondary: Recht (2019), A Tour of Reinforcement Learning: The View from Continu
 Appears in
 
 Slides: Week04, Week05, Week06, Week11
-Lecture notes: Week04 §2.3; Week05 §4.3 (the second anchor number); Week06 §5.1 (the third: the two branches priced against each other)
-Exercises: Week04 Q4.5, Q4.6; Week06 Q6.7
+Lecture notes: Week04 §2.3; Week05 §4.3 (the second anchor number); Week06 §5.1 (the third: the two branches priced against each other); Week11 §4.2 (the fourth: structure against interaction, and the ceiling that comes with it)
+Exercises: Week04 Q4.5, Q4.6; Week06 Q6.7; Week11 Q11.6
 Practical: Week04, Week06
 
 
@@ -3460,7 +3460,7 @@ In MPC stability theory the terminal cost is not a convenience but a certificate
 Key limitation
 A terminal cost that is a good approximation near the goal and a bad one far from it can make a short-horizon controller worse than \hat J = 0: the planner is then confidently steered by a fiction. What matters is where in the state space the error sits, as much as the size of \|\hat J - J^\star\|. That is the question Week 2’s challenge problem asks quantitatively, and the reason approximate-DP bounds of the form \|J^{\pi} - J^\star\| \le \tfrac{2\gamma}{1-\gamma}\|\hat J - J^\star\| are usually loose in practice.
 Related concepts
-MPC | Bellman equation | Value function | LQR | Torque-limited pendulum | Model-based RL | Function approximation in RL | Discount factor
+MPC | Bellman equation | Value function | LQR | Torque-limited pendulum | Function approximation in RL | Discount factor
 References
 
 Primary: Bertsekas (2019), Ch. 2 — approximation in value space, cost-to-go bounds
@@ -3469,8 +3469,8 @@ Secondary: Rawlings, Mayne &amp; Diehl, Ch. 2 — terminal ingredients and their
 Appears in
 
 Slides: Week02, Week11
-Lecture notes: Week02 §4.5, §5.2
-Exercises: Week02 Q2.2(c), Q3.2, Challenge
+Lecture notes: Week02 §4.5, §5.2; Week11 §3.3 (a better tail buys a shorter horizon, which is also less exposed to compounding model error)
+Exercises: Week02 Q2.2(c), Challenge
 Practical: Week02
 
 
@@ -3580,7 +3580,7 @@ Appears in
 
 Slides: Week02
 Lecture notes: Week02 §3
-Exercises: Week02 Q1.1, Q1.3, Q3.1
+Exercises: Week02 Q1.1, Q1.3
 Practical: Week02
 
 
@@ -3647,7 +3647,7 @@ This is a step-size bound stated in the space where the guarantee lives, which i
 Key limitation
 The constraint bounds the movement of the policy and guarantees nothing about the plant. A policy that stays close to the previous one at every step can still drift anywhere over many steps, and closeness in KL over the visited states says nothing about a state the policy has never reached. The improvement guarantee behind the surrogate holds under a bound involving the maximum KL divergence, which practice replaces by an average, so what is run is a heuristic version of the theorem. The clipped form of PPO enforces no divergence bound at all and only removes the incentive to violate one.
 Related concepts
-PPO | Actor-critic | Importance sampling | Policy gradient theorem | Gaussian policy class | Policy parameterisation | Two-timescale stochastic approximation | CPO | CMDP | Safe exploration | Safe RL | Design-space diagram | Off-policy learning
+PPO | Actor-critic | Importance sampling | Policy gradient theorem | Gaussian policy class | Policy parameterisation | Two-timescale stochastic approximation | CPO | Safe exploration | Design-space diagram | Off-policy learning
 References
 
 Primary: Schulman, Levine, Abbeel, Jordan &amp; Moritz (2015), Trust region policy optimization
@@ -3731,7 +3731,7 @@ Optimism is the same device as designing against the most favourable member of a
 Key limitation
 The guarantee is asymptotic in character and its constants are loose, so on the Week 4 instance UCB1 trails a fixed \varepsilon = 0.10 until pull 64\,400, and at T = 10^4 it finishes behind both other rules. On hardware the mechanism is itself the hazard: the rule deliberately selects the least understood action, which is very often the action most likely to leave the safe envelope (Safe exploration).
 Related concepts
-Epsilon-greedy | Thompson sampling | Regret | Bandit problem | Sample complexity | Exploration-exploitation tradeoff | Safe exploration | Bayes-adaptive MDP | Model-based RL
+Epsilon-greedy | Thompson sampling | Regret | Bandit problem | Sample complexity | Exploration-exploitation tradeoff | Safe exploration | Bayes-adaptive MDP
 References
 
 Primary: Lattimore &amp; Szepesvári, Bandit Algorithms (2020), Ch. 7–8
@@ -3942,7 +3942,7 @@ We loseWhat replaces it, and whereExhaustive Bellman updatesSampling: only visit
 Key limitation
 The grid classifies what a method represents, which is not the same as how well it works, how many samples it needs, or whether it is safe on hardware. It is an orientation device, not a selection criterion.
 Related concepts
-Bellman operator | Bellman equation | Dynamic programming | Policy gradient theorem | Baseline (variance reduction) | Discounted state-visitation measure | Open-loop vs feedback | SARSA | Q-learning | Policy gradient (REINFORCE) | Exploration-aware Bellman operator | Bootstrapping | Composition with classical control | Failure modes of approximate RL | Model-based RL | Bandit problem | Actor-critic | Critic | PPO | SAC | DDPG | Design-space diagram
+Bellman operator | Bellman equation | Dynamic programming | Policy gradient theorem | Baseline (variance reduction) | Discounted state-visitation measure | Open-loop vs feedback | SARSA | Q-learning | Policy gradient (REINFORCE) | Exploration-aware Bellman operator | Bootstrapping | Composition with classical control | Failure modes of approximate RL | Bandit problem | Actor-critic | Critic | PPO | SAC | DDPG | Design-space diagram
 References
 
 Course-specific synthesis; closest published framing: Meyn (2022), Ch. 1; Recht (2019), “A Tour of Reinforcement Learning: The View from Continuous Control”
@@ -3950,7 +3950,7 @@ Course-specific synthesis; closest published framing: Meyn (2022), Ch. 1; Recht 
 Appears in
 
 Slides: Week01, Week02, Week03, Week04, Week05, Week06, Week07, Week09, Week10, Week11 (middle column opened)
-Lecture notes: Week01 §5; Week02 §5.1 (left column completed: iLQR, MPC); Week03 §6.4 (top-left cell completed; the only cell where “exactly” applies); Week04 §5.5 (top-right cell entered; the cell with no Bellman object); Week05 (the first Bellman object in that cell, \mathcal{T}^\pi on samples); Week06 §5.2 (the second row opens; three different answers to the Bellman-object question in one session); Week07 §5.1 (same cell, table removed: LSTD, LSPI and DQN); Week09 §6.1 (the policy row gets a theorem, and a value estimate that does not move the method out of it); Week10 §7 (the bottom row filled, by the same test that kept Week 9 out of it)
+Lecture notes: Week01 §5; Week02 §5.1 (left column completed: iLQR, MPC); Week03 §6.4 (top-left cell completed; the only cell where “exactly” applies); Week04 §5.5 (top-right cell entered; the cell with no Bellman object); Week05 (the first Bellman object in that cell, \mathcal{T}^\pi on samples); Week06 §5.2 (the second row opens; three different answers to the Bellman-object question in one session); Week07 §5.1 (same cell, table removed: LSTD, LSPI and DQN); Week09 §6.1 (the policy row gets a theorem, and a value estimate that does not move the method out of it); Week10 §7 (the bottom row filled, by the same test that kept Week 9 out of it); Week11 §6.2 (the middle column opened, with an occupant in all three rows)
 Exercises: none
 Practical: none
 
@@ -3992,7 +3992,7 @@ Appears in
 Slides: Week01, Week03
 Lecture notes: Week01 §3; Week03 §3.1, §3.3
 Exercises: Week01 Q1.3, Q3.1; Week03 Q3.2
-Practical: none
+Practical: Week01
 
 
 ---
@@ -4032,8 +4032,8 @@ Secondary: Sutton &amp; Barto (2nd ed.), Ch. 4
 Appears in
 
 Slides: Week01, Week02, Week03, Week11
-Lecture notes: Week01 §3.5–3.6; Week02; Week03 §4
-Exercises: Week01 Q3.1, Q3.2; Week02 Q2.2; Week03 Q3.6, Q3.7
+Lecture notes: Week01 §3.5–3.6; Week02; Week03 §4; Week11 §4.1 (run on a fitted kernel, where the guarantees hold for the wrong MDP)
+Exercises: Week01 Q3.1, Q3.2; Week02 Q2.2
 Practical: Week01; Week03
 
 
@@ -4058,7 +4058,7 @@ Planted framing (Week 2)
 iLQR (and its close relative DDP) is introduced only to be placed. Its backward pass leaves behind something direct Trajectory optimisation does not: a sequence of local gains K_k, giving the law u_k = -K_k(x_k - x_k^{\text{ref}}) + u_k^{\text{ref}}, valid in a tube around the nominal trajectory. That local feedback law is why iLQR earns the policy × model-known cell of the Unifying diagram and trajectory optimisation has no cell at all.
 In Bellman terms: iLQR applies \mathcal{T} exactly, on a local quadratic model of a nonlinear problem, as against LQR (exactly, on quadratics) and MPC (over a truncated horizon).
 Related concepts
-Trajectory optimisation | MPC | LQR | Unifying diagram | Model-based RL | Closure under the Bellman operator
+Trajectory optimisation | MPC | LQR | Unifying diagram | Closure under the Bellman operator
 Appears in
 
 Slides: Week02
