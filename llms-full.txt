@@ -152,9 +152,43 @@ Core idea
 Week 4 identifies two difficulties at once: the Bellman operator can no longer be evaluated, and our actions determine what we observe. The first has a clean answer, sample and average, developed in Week 5. The second is entangled with delayed rewards, credit assignment and state coverage inside a full MDP, so the standard move is to delete everything except the difficulty of interest. What survives the deletion is a set of actions, a reward signal, and the loop in which knowledge changes after every pull while the environment does not.
 Formal definition
 At each round t = 1,\dots,T the learner selects an arm a_t \in \{1,\dots,K\} and observes r_t \sim \nu_{a_t}, where each \nu_i is a fixed distribution with unknown mean \mu_i, and rewards are independent across rounds conditional on the arms chosen. Write \mu^\star = \max_i \mu_i and \Delta_i = \mu^\star - \mu_i \ge 0 for the gap of arm i. Only the reward of the selected arm is observed, which is called bandit feedback.
+A policy maps the history to the next arm, a_t = \pi_t(H_{t-1}) with H_{t-1} = (a_1, r_1, \dots, a_{t-1}, r_{t-1}), possibly randomised. It is chosen to maximise \mathbb{E}\big[\sum_{t=1}^{T} r_t\big] on every instance (\nu_1, \dots, \nu_K), because the learner does not know which one it faces. With the means known the problem is trivial (pull \arg\max_i \mu_i forever), so all of the difficulty comes from the unknown \mu_i. Maximising the expected total reward is the same as minimising regret.
 Three features carry the weight: the distributions are fixed, so pulling does not move a state; the feedback is bandit feedback, which is where the statistical content lives; and the horizon T counts decisions, so trials are the only resource spent.
 Connection to classical control
-A bandit is the \gamma = 0 case of the problem the rest of the course studies. Its estimate \hat\mu_i is \hat Q(x,a) at the only state there is, and its update \hat\mu \leftarrow \hat\mu + \alpha(r - \hat\mu) becomes the TD update \hat V(x) \leftarrow \hat V(x) + \alpha(r + \gamma \hat V(x&#039;) - \hat V(x)) the moment a successor state is restored. In control terms it is a pure experiment-design problem with the dynamics switched off, which is why the classical analogue is A/B testing and sequential design rather than regulation.
+A bandit is the \gamma = 0 case of the problem the rest of the course studies. Its estimate \hat\mu_i is \hat Q(x,a) at the only state there is, and its update \hat\mu \leftarrow \hat\mu + \alpha(r - \hat\mu) becomes the TD update \hat V(x) \leftarrow \hat V(x) + \alpha(r + \gamma \hat V(x&#039;) - \hat V(x)) the moment a successor state is restored. In control terms it is a pure experiment-design problem with the dynamics switched off, which is why the classical analogue is A/B testing and sequential design rather than regulation. Read as a controller, \pi_t is a feedback law with no plant state to act on. The only thing that evolves is what the learner knows.
+The same arms support two different problems, and which one a robot faces depends on when the trials happen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Regret minimisationBest-arm identificationSettingevery pull is real use, learning in servicea tuning campaign, then the winner is deployedWhat is countedreward lost while learning, \sum_i \Delta_i\,\mathbb{E}[n_i(T)]trials until the best arm is returned with probability at least 1-\deltaA clearly bad armdropped after a few pulls, never measured preciselymeasured until separated from the bestA near-optimal armmay stay confused with the best, at a cost of only \Delta_i per pullmust be separated, at about 1/\Delta_i^2 pulls
+Tuning gains in the lab and deploying the winner is best-arm identification, since lab trials cost time and lose nothing that matters. A robot that learns while it operates pays \Delta_i for every bad pull, which is regret minimisation and the version Week 4 studies. A regret-minimising learner can do well without ever identifying the best arm with confidence.
 Genuine bandit problems do occur in robotics: selecting among K pre-tuned controllers or gain sets for a task that resists accurate modelling, choosing among grasp or insertion primitives where each attempt succeeds or fails, and deployment-time A/B testing across a fleet where every robot-hour is expensive.
 Key limitation
 Everything deleted returns with the state: delayed consequences and credit assignment (Week 5), coverage, since the states worth visiting sit behind sequences of correct actions (Weeks 6 to 7), and irreversibility, since an arm can always be abandoned after one pull while a robot on its back may have no admissible action that stands it up (Week 13). Bandit theory is a deep field and this course takes three algorithms and one lower bound from it: the vocabulary of exploration is what should survive to Week 15.
@@ -169,7 +203,7 @@ Appears in
 
 Slides: Week04
 Lecture notes: Week04 §2
-Exercises: Week04 Q4.6
+Exercises: none
 Practical: Week04
 
 
@@ -250,8 +284,8 @@ Secondary: Gittins (1979) for the index solution in the bandit case; Feldbaum (1
 Appears in
 
 Slides: Week04
-Lecture notes: Week04 §5.4
-Exercises: Week04 Q4.8
+Lecture notes: Week04 §3.9
+Exercises: Week04 Q4.6
 Practical: none
 
 
@@ -519,7 +553,7 @@ The minimisation is identical to the deterministic one. Hence K_k is unchanged, 
 Where it stops being true
 The result assumes A, B, Q, R are known exactly and that the only unknown is a zero-mean disturbance. When the model is uncertain the separation generally breaks, for a structural reason: an action then has two effects on the future instead of one. It moves the state (control) and it produces an observation that sharpens knowledge of the dynamics (learning). An optimal policy must trade these off, so “plan as if the current best estimate were correct” is convenient but no longer optimal.
 That trade-off is called exploration, it is the subject of Week 4, and it is one of the two genuinely new ingredients RL adds to what a control engineer already knows. Several generations of adaptive-control papers carried certainty equivalence into this setting; the counterexamples are well documented.
-Week 4 puts numbers on the boundary. The two effects of an input are Dual control, named by Feldbaum in 1960, and the exact treatment is the Bayes-adaptive MDP, which augments the state with the posterior and is computationally out of reach. On the scalar plant x_{k+1} = ax_k + bu_k + w_k with b unknown, the immediate cost is minimised at a moderate input magnitude while the information gain grows with magnitude (the informative term in the parameter update scales with u_k^2), so the dual-optimal input sits at an offset from the certainty-equivalent one. Every exploration rule in the course is a cheap prescription for that offset. Certainty equivalence remains the right default when the prior variance is small enough that the offset is negligible, which Exercise 4.8 asks students to measure.
+Week 4 puts numbers on the boundary. The two effects of an input are Dual control, named by Feldbaum in 1960, and the exact treatment is the Bayes-adaptive MDP, which augments the state with the posterior and is computationally out of reach. On the scalar plant x_{k+1} = ax_k + bu_k + w_k with b unknown, the immediate cost is minimised at a moderate input magnitude while the information gain grows with magnitude (the informative term in the parameter update scales with u_k^2), so the dual-optimal input sits at an offset from the certainty-equivalent one. Every exploration rule in the course is a cheap prescription for that offset. Certainty equivalence remains the right default when the prior variance is small enough that the offset is negligible, which Exercise 4.6 asks students to measure.
 Week 5 supplies a third instance, on a chain instead of a gain. Given a fixed batch and repeated sweeps to convergence, tabular TD(0) returns the value function of the maximum-likelihood empirical MDP, so it fits a model to the data and then evaluates as though the fitted model were correct. On the eight-episode two-state batch it answers V(A) = 0.75 where Monte Carlo policy evaluation answers V(A) = 0. The move is rewarded when the model class is right, which for a chain means the Markov property, and it propagates the misspecification through every bootstrapped value when the observed state omits something the plant depends on.
 Connection to classical control
 This is classical stochastic control, the LQG separation result. Its value in this course is as a boundary marker: it delimits exactly how far “ignore the uncertainty while planning” can be pushed, and therefore what is left for RL to be about. Every subsequent week that estimates something from data is operating outside its scope.
@@ -535,8 +569,8 @@ Secondary: Anderson &amp; Moore, Optimal Control: Linear Quadratic Methods (LQG 
 Appears in
 
 Slides: Week02, Week04, Week05, Week11
-Lecture notes: Week02 §2.6; Week04 §1.5, §1.6 (the boundary, with the dual effect priced); Week05 §3.4 (batch TD as certainty equivalence on a chain); Week11 §1.3, §2.1 (the fitted model made explicit, and no separation theorem available)
-Exercises: Week02 Q2.1; Week04 Q4.1, Q4.8; Week11 Q11.5
+Lecture notes: Week02 §2.6; Week04 §1.5, §1.7 (the boundary, with the dual effect priced); Week05 §3.4 (batch TD as certainty equivalence on a chain); Week11 §1.3, §2.1 (the fitted model made explicit, and no separation theorem available)
+Exercises: Week02 Q2.1; Week04 Q4.1, Q4.6; Week11 Q11.5
 Practical: none
 
 
@@ -1171,8 +1205,8 @@ Secondary: Åström &amp; Wittenmark, Adaptive Control, on certainty equivalence
 Appears in
 
 Slides: Week04
-Lecture notes: Week04 §1.5, §1.6
-Exercises: Week04 Q4.1, Q4.8
+Lecture notes: Week04 §1.6, §1.7
+Exercises: Week04 Q4.1, Q4.6
 Practical: none
 
 
@@ -1340,7 +1374,7 @@ Appears in
 
 Slides: Week04, Week06
 Lecture notes: Week04 §3.1, §3.2; Week06 §1.4, §2.4 (the state-dependent form and its fixed point)
-Exercises: Week04 Q4.6, Q4.7; Week06 Q6.4
+Exercises: Week06 Q6.4
 Practical: Week04, Week06
 
 
@@ -2437,7 +2471,7 @@ Markov property | MDP | Bayes-adaptive MDP | Value function | Principle of optim
 Appears in
 
 Slides: Week01, Week03, Week04
-Lecture notes: Week01 §2.5 (Markov warning box); Week03 §2.4, §2.5; Week04 §5.4
+Lecture notes: Week01 §2.5 (Markov warning box); Week03 §2.4, §2.5; Week04 §3.9
 Exercises: none
 Practical: none
 
@@ -2891,7 +2925,7 @@ Original paper: Lai &amp; Robbins (1985), Asymptotically efficient adaptive allo
 Appears in
 
 Slides: Week04
-Lecture notes: Week04 §2.2, §3.6
+Lecture notes: Week04 §2.3, §3.7, §3.8
 Exercises: Week04 Q4.3, Q4.5
 Practical: Week04
 
@@ -3096,7 +3130,7 @@ Appears in
 
 Slides: Week04
 Lecture notes: Week04 §4
-Exercises: Week04 Q4.3, Q4.7
+Exercises: Week04 Q4.3
 Practical: Week04
 
 
@@ -3137,8 +3171,8 @@ Secondary: Recht (2019), A Tour of Reinforcement Learning: The View from Continu
 Appears in
 
 Slides: Week04, Week05, Week06, Week11
-Lecture notes: Week04 §2.3; Week05 §4.3 (the second anchor number); Week06 §5.1 (the third: the two branches priced against each other); Week11 §4.2 (the fourth: structure against interaction, and the ceiling that comes with it)
-Exercises: Week04 Q4.5, Q4.6; Week06 Q6.7; Week11 Q11.6
+Lecture notes: Week04 §2.4; Week05 §4.3 (the second anchor number); Week06 §5.1 (the third: the two branches priced against each other); Week11 §4.2 (the fourth: structure against interaction, and the ceiling that comes with it)
+Exercises: Week04 Q4.5; Week06 Q6.7; Week11 Q11.6
 Practical: Week04, Week06
 
 
@@ -3509,7 +3543,7 @@ Appears in
 
 Slides: Week04
 Lecture notes: Week04 §3.5
-Exercises: Week04 Q4.2, Q4.6
+Exercises: Week04 Q4.2
 Practical: Week04
 
 
@@ -3741,7 +3775,7 @@ Appears in
 
 Slides: Week04
 Lecture notes: Week04 §3.3, §3.4
-Exercises: Week04 Q4.2, Q4.4, Q4.5, Q4.6
+Exercises: Week04 Q4.2, Q4.4, Q4.5
 Practical: Week04
 
 
@@ -3825,7 +3859,7 @@ The usual taxonomy “value-based / policy-based / actor-critic” invites the r
 
 
 
-Explicitly representsDynamics model availableNo dynamics model (interaction only)A value function (value-based)DP, Value iteration, Policy iteration, Riccati / LQR (Wk 1–3)bandit algorithms ¶ (Wk 4), TD learning ♭ (Wk 5), Q-learning, SARSA, DQN ‡, LSTD (Wk 6–7)A policy (policy-based)iLQR ‖ (Wk 2)Policy gradient (REINFORCE), REINFORCE with a Baseline (variance reduction) § (Wk 6, 9)Both (actor-critic)MPC † (Wk 2, 11)Actor-critic, PPO §, DDPG, TD3, SAC (Wk 10), Dyna (Wk 11)
+Explicitly representsDynamics model availableNo dynamics model (interaction only)A value function (value-based)DP, Value iteration, Policy iteration, Riccati / LQR (Wk 1–3)bandit algorithms ¶ (Wk 4), TD learning ♭ (Wk 5), Q-learning, SARSA, DQN ‡, LSTD (Wk 6–7)A policy (policy-based)iLQR ‖ (Wk 2)Policy gradient (REINFORCE), REINFORCE with a Baseline (variance reduction) § (Wk 6, 9)Both (actor-critic)MPC † (Wk 2, 11)Actor-critic, PPO §, DDPG, TD3, SAC (Wk 10)
 ‖ Direct trajectory optimisation is not on the diagram, and its absence is the point. It stores an open-loop plan \{u_0,\dots,u_{N-1}\} (numbers, not a function of state), so by the row rule it represents nothing reusable: off the planned trajectory it has no answer. Putting it in the policy row would contradict Open-loop vs feedback, where the optimisation variable is explicitly a sequence of functions \pi_k:\mathcal{X}\to\mathcal{U}. iLQR earns the cell: its backward pass leaves time-varying gains K_k, i.e. an explicit local feedback law u_k = -K_k(x_k-x_k^{\text{ref}})+u_k^{\text{ref}}.
 Read the model column as one spectrum of how much policy is stored: DP / LQR (a global policy, through V) → iLQR (a local law along one trajectory) → MPC (none stored, recomputed online) → direct trajectory optimisation (none at all, one plan for one x_0, hence off the grid).
 † MPC represents a model and a terminal value function, but its policy is implicit, recomputed online by optimisation at every timestep and never stored. This is the awkward cell and students should be told so.
@@ -3950,7 +3984,7 @@ Course-specific synthesis; closest published framing: Meyn (2022), Ch. 1; Recht 
 Appears in
 
 Slides: Week01, Week02, Week03, Week04, Week05, Week06, Week07, Week09, Week10, Week11 (middle column opened)
-Lecture notes: Week01 §5; Week02 §5.1 (left column completed: iLQR, MPC); Week03 §6.4 (top-left cell completed; the only cell where “exactly” applies); Week04 §5.5 (top-right cell entered; the cell with no Bellman object); Week05 (the first Bellman object in that cell, \mathcal{T}^\pi on samples); Week06 §5.2 (the second row opens; three different answers to the Bellman-object question in one session); Week07 §5.1 (same cell, table removed: LSTD, LSPI and DQN); Week09 §6.1 (the policy row gets a theorem, and a value estimate that does not move the method out of it); Week10 §7 (the bottom row filled, by the same test that kept Week 9 out of it); Week11 §6.2 (the middle column opened, with an occupant in all three rows)
+Lecture notes: Week01 §5; Week02 §5.1 (left column completed: iLQR, MPC); Week03 §6.4 (top-left cell completed; the only cell where “exactly” applies); Week04 §5.4 (top-right cell entered; the cell with no Bellman object); Week05 (the first Bellman object in that cell, \mathcal{T}^\pi on samples); Week06 §5.2 (the second row opens; three different answers to the Bellman-object question in one session); Week07 §5.1 (same cell, table removed: LSTD, LSPI and DQN); Week09 §6.1 (the policy row gets a theorem, and a value estimate that does not move the method out of it); Week10 §7 (the bottom row filled, by the same test that kept Week 9 out of it); Week11 §6.2 (the middle column opened, with an occupant in all three rows)
 Exercises: none
 Practical: none
 
@@ -4118,7 +4152,7 @@ represents, i.e. which objects it actually stores and updates.
 
 
 
-Explicitly representsDynamics model availableNo dynamics model (interaction only)A value function (value-based)DP, value iteration, policy iteration, Riccati / LQRbandit algorithms ¶, TD learning, Q-learning, SARSA, DQN, LSTDA policy (policy-based)iLQR ‖REINFORCE, REINFORCE with a baselineBoth (actor-critic)MPC †Actor-critic, PPO §, DDPG, TD3, SAC, Dyna
+Explicitly representsDynamics model availableNo dynamics model (interaction only)A value function (value-based)DP, value iteration, policy iteration, Riccati / LQRbandit algorithms ¶, TD learning, Q-learning, SARSA, DQN, LSTDA policy (policy-based)iLQR ‖REINFORCE, REINFORCE with a baselineBoth (actor-critic)MPC †Actor-critic, PPO §, DDPG, TD3, SAC
 ‖ Direct trajectory optimisation is not on the grid. It stores an open-loop plan
 \{u_0,\dots,u_{N-1}\} (numbers, not a function of state), so it represents no policy at
 all. iLQR earns the cell: its backward pass leaves time-varying gains K_k, an explicit

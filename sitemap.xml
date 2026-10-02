@@ -9,13 +9,13 @@
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/bandit-problem</loc>
-    <lastmod>2026-09-05T13:32:26.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/baseline-(variance-reduction)</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/bayes-adaptive-mdp</loc>
-    <lastmod>2026-09-05T13:32:26.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/bellman-equation</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
@@ -36,7 +36,7 @@
     <lastmod>2026-09-25T08:33:55.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/certainty-equivalence</loc>
-    <lastmod>2026-09-25T08:33:55.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/closure-under-the-bellman-operator</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
@@ -78,7 +78,7 @@
     <lastmod>2026-09-25T08:33:55.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/dual-control</loc>
-    <lastmod>2026-09-25T08:33:55.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/dynamic-programming</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
@@ -90,7 +90,7 @@
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/epsilon-greedy</loc>
-    <lastmod>2026-09-05T13:32:26.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/experience-replay</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
@@ -162,7 +162,7 @@
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/pomdp</loc>
-    <lastmod>2026-09-05T13:32:26.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/ppo</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
@@ -195,7 +195,7 @@
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/regret</loc>
-    <lastmod>2026-09-05T13:32:26.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/residual-rl</loc>
     <lastmod>2026-09-25T08:33:55.000Z</lastmod>
@@ -210,10 +210,10 @@
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/safe-exploration</loc>
-    <lastmod>2026-09-25T08:33:55.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/sample-complexity</loc>
-    <lastmod>2026-09-25T08:33:55.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/score-function-estimator</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
@@ -240,7 +240,7 @@
     <lastmod>2026-09-25T08:33:55.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/thompson-sampling</loc>
-    <lastmod>2026-09-05T13:32:26.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/torque-limited-pendulum</loc>
     <lastmod>2026-09-25T08:33:55.000Z</lastmod>
@@ -255,13 +255,13 @@
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/ucb</loc>
-    <lastmod>2026-09-25T08:33:55.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/underactuation</loc>
     <lastmod>2026-09-05T13:32:26.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/unifying-diagram</loc>
-    <lastmod>2026-09-25T08:33:55.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/value-function</loc>
     <lastmod>2026-09-09T13:37:43.000Z</lastmod>
@@ -273,41 +273,41 @@
     <lastmod>2026-09-25T08:33:55.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/</loc>
-    <lastmod>2026-09-05T13:32:26.000Z</lastmod>
+    <lastmod>2026-10-02T14:41:11.000Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/04_concepts/</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/actor-critic</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/policy-based</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/value-based</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/course-framework</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/function-approximation</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/exploration</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/foundations</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/model-based</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/safety</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/offline-rl</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url><url>
     <loc>https://AndreuCecilia.github.io/rl-robotics/tags/</loc>
-    <lastmod>2026-09-25T08:34:41.334Z</lastmod>
+    <lastmod>2026-10-02T14:42:09.963Z</lastmod>
   </url></urlset>
